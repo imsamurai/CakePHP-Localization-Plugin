@@ -138,7 +138,9 @@ class Message extends LocalizationAppModel {
 	 */
 	protected function _exportLocale($code, array $data) {
 		$path = sprintf(Configure::read('Localization.path'), $code);
+		//@codingStandardsIgnoreStart
 		@mkdir($path, 0777, true);
+		//@codingStandardsIgnoreEnd
 		$LocaleFile = new File($path . 'default.po', true);
 		$success = $LocaleFile->write(Configure::read('Localization.header'));
 		foreach ($data as $msgid => $msgstr) {
@@ -158,7 +160,9 @@ class Message extends LocalizationAppModel {
 	 */
 	protected function _exportJsLocale($code, array $data) {
 		$path = sprintf(Configure::read('Localization.jsPath'), $code);
+		//@codingStandardsIgnoreStart
 		@mkdir($path, 0777, true);
+		//@codingStandardsIgnoreEnd
 		$LocaleFile = new File($path . 'default.js', true);
 		$success = $LocaleFile->write(sprintf(Configure::read('Localization.jsTemplate'), json_encode($data)));
 		$LocaleFile->close();

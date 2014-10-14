@@ -156,7 +156,6 @@ class MessagesControllerTest extends ControllerTestCase {
 			)
 		));
 
-
 		if ($saved) {
 			$id = 123;
 			if ($success) {

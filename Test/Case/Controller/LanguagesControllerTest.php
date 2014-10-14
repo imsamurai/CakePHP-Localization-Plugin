@@ -111,7 +111,6 @@ class LanguagesControllerTest extends ControllerTestCase {
 			)
 		));
 
-
 		if ($saved) {
 			$id = 123;
 			if ($success) {
