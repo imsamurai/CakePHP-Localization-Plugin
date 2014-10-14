@@ -1,0 +1,32 @@
+{
+	"name": "imsamurai/cakephp-localization",
+	"description": "Plugin for handle localization of CakePHP application",
+	"type": "cakephp-plugin",
+	"keywords": [
+		"cakephp",
+		"localization",
+		"plugin",
+		"language"
+	],
+	"homepage": "http://github.com/imsamurai/CakePHP-Localization-Plugin",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Shamray Alexander",
+			"email": "im.samuray@gmail.com",
+			"homepage": "https://imsamurai.me",
+			"role": "Maintainer"
+		}
+	],
+	"require": {
+		"composer/installers": "*"
+	},
+	"support": {
+		"email": "im.samuray@gmail.com",
+		"issues": "https://github.com/imsamurai/CakePHP-Localization-Plugin/issues",
+		"source": "https://github.com/imsamurai/CakePHP-Localization-Plugin"
+	},
+	"extra": {
+		"installer-name": "Localization"
+	}
+}

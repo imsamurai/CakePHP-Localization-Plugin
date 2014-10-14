@@ -1,0 +1,47 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+  - hhvm
+
+env:
+  global:
+    - PLUGIN_NAME=Localization
+    - PLUGIN_PATH=Plugin/Localization
+    - REQUIRE="imsamurai/cakephp-environment:dev-master phpdocumentor/phpdocumentor:2.* imsamurai/cakephp-google-chart: 1.*"
+    - DB=mysql
+    - CAKE_VERSION=2.5
+    - secure: nhtx70ch92VsuiwrBGcgRZdEnWnO3qlOmCrMYgugZd1xWz1LjAcqaX7RJVrsqt5AQeR3XaKHTVcCAWewyNwwNhk571/rP67EWbSpaD3M/66GusuvuSCBTaAOXGrF3Zw1lombC4A2rUHu4kMlJjRGFrZh639gJwb1wTYnBGhszb4=
+  matrix:
+    - CAKE_VERSION=2.4
+    - CAKE_VERSION=2.5
+
+matrix:
+  include:
+    - php: 5.4
+      env:
+        - COVERALLS=1
+    - php: 5.4
+      env:
+        - PHPCS=1
+    - php: 5.4
+      env:
+        - FOC_VALIDATE=1
+    - php: 5.5
+      env:
+        - PHPDOC=1
+        
+before_script:
+  - git clone git://github.com/imsamurai/travis-plugin-build.git --depth 1 travis
+  - chmod +x ./travis/*
+  - ./travis/before_script.sh
+
+script:
+  - ./travis/script.sh
+
+after_success:
+  - ./travis/after_success.sh
+
+notifications:
+  email: im.samuray@gmail.com
