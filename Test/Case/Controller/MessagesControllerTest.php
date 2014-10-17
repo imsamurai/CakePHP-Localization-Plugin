@@ -33,7 +33,8 @@ class MessagesControllerTest extends ControllerTestCase {
 	public function testIndex(array $query, array $paginate) {
 		$Controller = $this->generate('Localization.Messages', array(
 			'models' => array(
-				'Localization.Language'
+				'Localization.Language',
+				'Localization.MessageReference',
 			),
 			'methods' => array(
 				'paginate',
@@ -45,6 +46,17 @@ class MessagesControllerTest extends ControllerTestCase {
 		$Controller->Message->Translations->tablePrefix = 'x_';
 		$Controller->Message->Translations->table = 'trans';
 		$Controller->Message->alias = 'Mes';
+
+		if (!empty($query['file'])) {
+			$Controller->MessageReference->expects($this->once())->method('find')
+					->with('list', array(
+						'fields' => array('message_id', 'message_id'),
+						'conditions' => array(
+							'LOWER(file) LIKE' => "%" . mb_strtolower($query['file']) . "%"
+						)
+					))
+					->willReturn(array(1, 2, 3));
+		}
 
 		$this->testAction('/localization/messages/index', array(
 			'method' => 'GET',
@@ -83,12 +95,15 @@ class MessagesControllerTest extends ControllerTestCase {
 							'id' => '1'
 						),
 						'order' => array('modified' => 'desc'),
-						'contain' => array('Translations' => array(
+						'contain' => array(
+							'Translations' => array(
 								'fields' => array(
 									'language_id',
 									'translated'
 								)
-							))
+							),
+							'References'
+						)
 					)
 				)
 			),
@@ -121,12 +136,50 @@ class MessagesControllerTest extends ControllerTestCase {
 							'(SELECT count(*) from x_trans WHERE message_id=Mes.id AND language_id IN (1,2,4) AND text!="") <' => 3
 						),
 						'order' => array('modified' => 'desc'),
-						'contain' => array('Translations' => array(
+						'contain' => array(
+							'Translations' => array(
 								'fields' => array(
 									'language_id',
 									'translated'
 								)
-							))
+							),
+							'References'
+						)
+					)
+				)
+			),
+			//set #2
+			array(
+				//query
+				array(
+					'not_translated_language_id' => array('1', '2', '4'),
+					'file' => 'home.ctp'
+				),
+				//paginate
+				array(
+					'Message' => array(
+						'limit' => 10,
+						'fields' => array(
+							'id',
+							'name',
+							'js',
+							'created',
+							'modified'
+						),
+						'conditions' => array(
+							'(SELECT count(*) from x_trans WHERE message_id=Mes.id AND language_id IN (1,2,4) AND text!="") <' => 3,
+							'id' => array(1, 2, 3)
+						),
+						'order' => array('modified' => 'desc'),
+						'contain' => array(
+							'Translations' => array(
+								'fields' => array(
+									'language_id',
+									'translated'
+								)
+							),
+							'References'
+						)
 					)
 				)
 			),

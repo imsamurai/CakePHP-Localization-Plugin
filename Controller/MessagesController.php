@@ -13,6 +13,7 @@ App::uses('LocalizationAppController', 'Localization.Controller');
  * 
  * @property Message $Message Message model
  * @property Language $Language Language model
+ * @property MessageReference $MessageReference Message Reference model
  * 
  * @package Localization
  * @subpackage Controller
@@ -24,7 +25,7 @@ class MessagesController extends LocalizationAppController {
 	 *
 	 * @var array
 	 */
-	public $uses = array('Localization.Message', 'Localization.Language');
+	public $uses = array('Localization.Message', 'Localization.Language', 'Localization.MessageReference');
 
 	/**
 	 * List of messages
@@ -43,12 +44,15 @@ class MessagesController extends LocalizationAppController {
 				),
 				'conditions' => $this->_paginationFilter(),
 				'order' => array('modified' => 'desc'),
-				'contain' => array('Translations' => array(
+				'contain' => array(
+					'Translations' => array(
 						'fields' => array(
 							'language_id',
 							'translated'
 						)
-					))
+					),
+					'References'
+				)
 			)
 		);
 		$this->set(array(
@@ -202,6 +206,17 @@ class MessagesController extends LocalizationAppController {
 			$conditions['LOWER(name) LIKE'] = "%" . mb_strtolower($conditions['name']) . "%";
 		}
 		unset($conditions['name']);
+		
+		if (!empty($conditions['file'])) {
+			$ids = $this->MessageReference->find('list', array(
+				'fields' => array('message_id', 'message_id'),
+				'conditions' => array(
+					'LOWER(file) LIKE' => "%" . mb_strtolower($conditions['file']) . "%"
+				)
+			));
+			$conditions['id'] = array_values($ids);
+		}
+		unset($conditions['file']);
 
 		return $conditions;
 	}

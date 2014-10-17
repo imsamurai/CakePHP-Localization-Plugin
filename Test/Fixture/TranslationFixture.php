@@ -8,6 +8,8 @@
 /**
  * LocalizationTranslationFixture
  *
+ * @package LocalizationTest
+ * @subpackage Fixture
  */
 class TranslationFixture extends CakeTestFixture {
 

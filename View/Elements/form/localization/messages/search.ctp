@@ -38,15 +38,18 @@ echo $this->Form->create('Message', array(
 	<div class="div-right">
 		<?= $this->Form->input('name'); ?>
 	</div>
+	<div class="div-right">
+		<?= $this->Form->input('file'); ?>
+	</div>
 </div>
 <div style="float:left;width:300px;">
 	<div class="div-right">
 		<?= $this->Form->input('modified', array('class' => 'input-large daterangepicker', 'type' => 'text')) ?>
 	</div>
 	<div class="div-right">
-<?= $this->Form->input('created', array('class' => 'input-large daterangepicker', 'type' => 'text')) ?>
+		<?= $this->Form->input('created', array('class' => 'input-large daterangepicker', 'type' => 'text')) ?>
 	</div>
-<div class="div-right">
+	<div class="div-right">
 		<?=
 		$this->Form->input('not_translated_language_id', array(
 			'type' => 'select',
@@ -59,8 +62,8 @@ echo $this->Form->create('Message', array(
 <div style="clear:left;"></div>
 <div style="float:left;width:415px;">
 	<div class="div-right">
-<?= $this->Form->button('Search', array('class' => 'btn btn-primary', 'div' => false)); ?>
-<?= $this->Html->link('Clear', array('action' => 'index'), array('class' => 'btn', 'id' => "btn-clear")); ?>
+		<?= $this->Form->button('Search', array('class' => 'btn btn-primary', 'div' => false)); ?>
+		<?= $this->Html->link('Clear', array('action' => 'index'), array('class' => 'btn', 'id' => "btn-clear")); ?>
 	</div>
 </div>
 <div style="clear:left;"></div>

@@ -12,6 +12,7 @@ App::uses('LocalizationAppModel', 'Localization.Model');
  * Localization Message Model
  * 
  * @property Translation $Translations Translation model
+ * @property MessageReference $References Message Reference model
  * 
  * @package Localization
  * @subpackage Model
@@ -51,7 +52,11 @@ class Message extends LocalizationAppModel {
 		'Translations' => array(
 			'className' => 'Localization.Translation',
 			'dependent' => true
-		)
+		),
+		'References' => array(
+			'className' => 'Localization.MessageReference',
+			'dependent' => true
+		),
 	);
 
 	/**
@@ -64,12 +69,22 @@ class Message extends LocalizationAppModel {
 	 *    depending on whether each record saved successfully.
 	 */
 	public function saveAssociatedChanged(array $data, array $options = array()) {
+		$this->set($data);
 		if ($this->id) {
 			$original = $this->getById($this->id);
-			foreach ($original['Translations'] as $languageId => $translation) {
-				if ($translation['text'] === $data['Translations'][$languageId]['text']) {
-					unset($data['Translations'][$languageId]);
+
+			if (!empty($data['Translations'])) {
+				foreach ($original['Translations'] as $languageId => $translation) {
+					if ($translation['text'] === $data['Translations'][$languageId]['text']) {
+						unset($data['Translations'][$languageId]);
+					}
 				}
+			}
+
+			if (!empty($data['References'])) {
+				$this->References->deleteAll(array(
+					'message_id' => $this->id
+						), false);
 			}
 		}
 		return $this->saveAssociated($data, $options);
@@ -86,7 +101,10 @@ class Message extends LocalizationAppModel {
 			'conditions' => array(
 				'id' => $id
 			),
-			'contain' => 'Translations'
+			'contain' => array(
+				'Translations',
+				'References'
+			)
 		));
 		if ($data) {
 			$data['Translations'] = Hash::combine($data['Translations'], '{n}.language_id', '{n}');

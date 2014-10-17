@@ -4,10 +4,11 @@
  * Author: imsamurai <im.samuray@gmail.com>
  */
 
-
 /**
  * LocalizationMessageFixture
  *
+ * @package LocalizationTest
+ * @subpackage Fixture
  */
 class MessageFixture extends CakeTestFixture {
 

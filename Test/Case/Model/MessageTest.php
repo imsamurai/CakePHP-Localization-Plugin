@@ -25,6 +25,7 @@ class MessageTest extends CakeTestCase {
 		'plugin.Localization.Language',
 		'plugin.Localization.Message',
 		'plugin.Localization.Translation',
+		'plugin.Localization.MessageReference',
 	);
 
 	/**
@@ -150,9 +151,20 @@ class MessageTest extends CakeTestCase {
 			'getById'
 		));
 		$Message->id = $id;
+		
+		if (!empty($data['References'])) {
+			$Reference = $this->getMockForModel('Localization.MessageReference', array('deleteAll'));
+			$Reference->expects($this->once())->method('deleteAll')
+					->with(array(
+						'message_id' => $id
+							), false)
+					->willReturn(true);
+			$Message->References = $Reference;
+		}
+
 		if ($dataFromDB) {
 			$Message->expects($this->once())->method('getById')->with($id)->willReturn($dataFromDB);
-		}
+		}		
 
 		$Message->expects($this->once())->method('saveAssociated')->with($dataToSave, $options)->willReturn(true);
 		$this->assertTrue($Message->saveAssociatedChanged($data, $options));
@@ -285,6 +297,85 @@ class MessageTest extends CakeTestCase {
 					)
 				)
 			),
+			//set #3
+			array(
+				//data
+				array(
+					'Message' => array(
+						'name' => 'testmessage'
+					),
+					'Translations' => array(
+						1 => array(
+							'text' => '111'
+						),
+						2 => array(
+							'text' => '2'
+						),
+						3 => array(
+							'text' => '3'
+						),
+					),
+					'References' => array(
+						array(
+							'file' => 'home.ctp',
+							'line' => '30',
+							'comment' => ''
+						),
+						array(
+							'file' => 'Model.php',
+							'line' => '',
+							'comment' => 'validation message'
+						)
+					)
+				),
+				//dataFromDB
+				array(
+					'Message' => array(
+						'name' => 'testmessage123'
+					),
+					'Translations' => array(
+						1 => array(
+							'text' => '1'
+						),
+						2 => array(
+							'text' => '2'
+						),
+					),
+					'References' => array(
+						array(
+							'file' => 'home.ctp',
+							'line' => '29',
+							'comment' => ''
+						)
+					)
+				),
+				//dataToSave
+				array(
+					'Message' => array(
+						'name' => 'testmessage'
+					),
+					'Translations' => array(
+						1 => array(
+							'text' => '111'
+						),
+						3 => array(
+							'text' => '3'
+						),
+					),
+					'References' => array(
+						array(
+							'file' => 'home.ctp',
+							'line' => '30',
+							'comment' => ''
+						),
+						array(
+							'file' => 'Model.php',
+							'line' => '',
+							'comment' => 'validation message'
+						)
+					)
+				)
+			),
 		);
 	}
 
@@ -307,7 +398,7 @@ class MessageTest extends CakeTestCase {
 			'conditions' => array(
 				'id' => $id
 			),
-			'contain' => 'Translations'
+			'contain' => array('Translations', 'References')
 		))->willReturn($findResult);
 
 		$this->assertSame($result, $Message->getById($id));

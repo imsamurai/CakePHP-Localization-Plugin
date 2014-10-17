@@ -22,8 +22,15 @@ abstract class LocalizationAppModel extends AppModel {
 	/**
 	 * {@inheritdoc}
 	 *
-	 * @var фккфн
+	 * @var array
 	 */
 	public $actsAs = array('Containable');
+	
+	/**
+	 * {@inheritdoc}
+	 *
+	 * @var int
+	 */
+	public $recursive = -1;
 
 }

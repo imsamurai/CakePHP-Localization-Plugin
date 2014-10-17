@@ -9,7 +9,7 @@
 /* @var $this View */
 ?>
 <h1>Messages</h1>
-<?php 
+<?php
 echo $this->element('form/localization/messages/search');
 echo $this->Html->link('Create', array(
 	'controller' => 'messages',
@@ -30,6 +30,7 @@ echo $this->element('pagination/pagination');
 			<th><?= $this->Paginator->sort('name'); ?></th>	
 			<th><?= $this->Paginator->sort('js'); ?></th>		
 			<th>Not translated to</th>
+			<th>References</th>
 			<th><?= $this->Paginator->sort('created'); ?></th>
 			<th><?= $this->Paginator->sort('modified'); ?></th>
 			<th>Actions</th>
@@ -47,6 +48,11 @@ echo $this->element('pagination/pagination');
 				<td><?= $this->Html->link($message['name'], array('action' => 'edit', $message['id'])); ?></td>
 				<td><?= $message['js'] ? 'yes' : 'no'; ?></td>
 				<td><?= implode(', ', $notTranslatedLangguages); ?></td>
+				<td><?=
+					$this->element('localization/messages/references', array(
+						'references' => $one["References"]
+					));
+					?></td>
 				<td title="<?= $message['created']; ?>"><?= $this->Time->timeAgoInWords($message['created']); ?></td>
 				<td title="<?= $message['modified']; ?>"><?= $this->Time->timeAgoInWords($message['modified']); ?></td>
 				<td>
@@ -56,7 +62,7 @@ echo $this->element('pagination/pagination');
 							<?=
 							$this->Html->tag('li', $this->Html->link('Delete', array('action' => 'delete', $message['id']), array(
 										'class' => 'btn-danger'
-											), "Are you sure want to delete ".Configure::read('Localization.prefix').$message['id']." message?")
+											), "Are you sure want to delete " . Configure::read('Localization.prefix') . $message['id'] . " message?")
 							);
 							?>
 						</ul>

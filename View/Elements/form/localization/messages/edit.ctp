@@ -26,6 +26,12 @@ if ($modified) {
 }
 echo $this->Form->input('js');
 
+echo $this->Html->tag('h4', 'References');
+echo $this->element('localization/messages/references', array(
+	'references' => $this->request->data("References")
+));
+
+echo $this->Html->tag('h4', 'Translations');
 foreach ($languages as $languageId => $languageName) {
 	echo $this->Form->hidden("Translations.$languageId.id");
 	echo $this->Form->hidden("Translations.$languageId.message_id", array('default' => empty($id) ? null : $id));
@@ -45,8 +51,11 @@ echo $this->Form->end();
 echo $this->Html->link('language codes list', 'http://www.loc.gov/standards/iso639-2/php/code_list.php', array('target' => '_blank'));
 ?>
 <style type="text/css">
-	.message-modified {
+	.message-modified, .message-noreference {
 		color: #777;
 		margin-bottom: 10px;
+	}
+	.message-reference {
+		color: #777;
 	}
 </style>
