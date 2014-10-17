@@ -12,6 +12,20 @@ CREATE TABLE `localization_languages` (
   UNIQUE KEY `full_unique` (`name`,`code`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin$$
 
+CREATE TABLE `localization_message_references` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `message_id` bigint(20) unsigned NOT NULL,
+  `file` varchar(200) DEFAULT NULL,
+  `line` int(10) unsigned DEFAULT NULL,
+  `comment` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `message_id` (`message_id`),
+  KEY `file` (`file`),
+  KEY `line` (`line`),
+  KEY `comment` (`comment`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8$$
+
 CREATE TABLE `localization_messages` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COLLATE utf8_bin NOT NULL,
