@@ -47,7 +47,7 @@
 <h2>
 <a name="abstract" class="anchor" href="#abstract"><span class="octicon octicon-link"></span></a>Abstract</h2>
 
-<p><a href="https://travis-ci.org/imsamurai/CakePHP-Localization-Plugin"><img src="https://travis-ci.org/imsamurai/CakePHP-Localization-Plugin.png" alt="Build Status"></a> <a href="https://coveralls.io/r/imsamurai/CakePHP-Localization-Plugin?branch=master"><img src="https://coveralls.io/repos/imsamurai/CakePHP-Localization-Plugin/badge.png?branch=master" alt="Coverage Status"></a> <a href="https://packagist.org/packages/imsamurai/CakePHP-Localization-Plugin"><img src="https://poser.pugx.org/imsamurai/CakePHP-Localization-Plugin/v/stable.png" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/imsamurai/CakePHP-Localization-Plugin"><img src="https://poser.pugx.org/imsamurai/CakePHP-Localization-Plugin/downloads.png" alt="Total Downloads"></a> <a href="https://packagist.org/packages/imsamurai/CakePHP-Localization-Plugin"><img src="https://poser.pugx.org/imsamurai/CakePHP-Localization-Plugin/v/unstable.png" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/imsamurai/CakePHP-Localization-Plugin"><img src="https://poser.pugx.org/imsamurai/CakePHP-Localization-Plugin/license.png" alt="License"></a></p>
+<p><a href="https://travis-ci.org/imsamurai/CakePHP-Localization-Plugin"><img src="https://travis-ci.org/imsamurai/CakePHP-Localization-Plugin.png" alt="Build Status"></a> <a href="https://coveralls.io/r/imsamurai/CakePHP-Localization-Plugin?branch=master"><img src="https://coveralls.io/repos/imsamurai/CakePHP-Localization-Plugin/badge.png?branch=master" alt="Coverage Status"></a> <a href="https://packagist.org/packages/imsamurai/cakephp-localization"><img src="https://poser.pugx.org/imsamurai/cakephp-localization/v/stable.png" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/imsamurai/cakephp-localization"><img src="https://poser.pugx.org/imsamurai/cakephp-localization/downloads.png" alt="Total Downloads"></a> <a href="https://packagist.org/packages/imsamurai/cakephp-localization"><img src="https://poser.pugx.org/imsamurai/cakephp-localization/v/unstable.png" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/imsamurai/cakephp-localization"><img src="https://poser.pugx.org/imsamurai/cakephp-localization/license.png" alt="License"></a></p>
 
 <p>Coordinator for any checker scripts.
 With this plugin you can unify periodic checkers for some of your services/data/etc,
@@ -88,6 +88,11 @@ git submodule add "git://github.com/imsamurai/CakePHP-Localization-Plugin.git" "
 
 <p>Use <code>Localization</code> model for manage localization variables in DB.
 Just open <code>example.com/localization</code></p>
+
+<p>For import/update all messages that used with <code>__*</code> functions use:</p>
+
+<pre><code>Console/cake Localization.messages extract --output db &lt;other params from i18n shell&gt;
+</code></pre>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/imsamurai">imsamurai</a></p>
