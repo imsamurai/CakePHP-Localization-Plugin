@@ -9,6 +9,9 @@
 
 /**
  * LocalizationAppModel Model
+ * 
+ * @package Localization
+ * @subpackage Model
  */
 abstract class LocalizationAppModel extends AppModel {
 
