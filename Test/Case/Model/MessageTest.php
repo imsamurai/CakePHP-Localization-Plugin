@@ -48,7 +48,7 @@ class MessageTest extends CakeTestCase {
 
 		Configure::write('Localization.path', TMP . 'Locale' . DS . '%s' . DS . 'LC_MESSAGES' . DS);
 		Configure::write('Localization.jsPath', TMP . 'Locale' . DS . '%s' . DS . 'LC_MESSAGES' . DS);
-		Configure::write('Localization.jsTemplate', "function \$L(m){var l=%s;return l[m]?l[m]:m;}");
+		Configure::write('Localization.jsTemplate', "function __(m){var l=%s;return l[m]?l[m]:m;}");
 		$locale = TMP . 'Locale';
 		`rm -rf $locale`;
 	}
@@ -824,11 +824,11 @@ msgstr "دسمبر"
 				),
 				//jsContent
 				array(
-					'deu' => 'function $L(m){var l={"december":"Dezember"};return l[m]?l[m]:m;}',
-					'eng' => 'function $L(m){var l={"december":"December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December"};return l[m]?l[m]:m;}',
-					'jpn' => 'function $L(m){var l={"december":"12\u6708"};return l[m]?l[m]:m;}',
-					'ukr' => 'function $L(m){var l={"december":"\u0413\u0440\u0443\u0434\u0435\u043d\u044c"};return l[m]?l[m]:m;}',
-					'urd' => 'function $L(m){var l={"december":"\u062f\u0633\u0645\u0628\u0631"};return l[m]?l[m]:m;}'
+					'deu' => 'function __(m){var l={"december":"Dezember"};return l[m]?l[m]:m;}',
+					'eng' => 'function __(m){var l={"december":"December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December December"};return l[m]?l[m]:m;}',
+					'jpn' => 'function __(m){var l={"december":"12\u6708"};return l[m]?l[m]:m;}',
+					'ukr' => 'function __(m){var l={"december":"\u0413\u0440\u0443\u0434\u0435\u043d\u044c"};return l[m]?l[m]:m;}',
+					'urd' => 'function __(m){var l={"december":"\u062f\u0633\u0645\u0628\u0631"};return l[m]?l[m]:m;}'
 				)
 			),
 			//set #1
@@ -935,11 +935,11 @@ msgstr "دسمبر"
 				),
 				//jsContent
 				array(
-					'deu' => 'function $L(m){var l={"december":"Dezember"};return l[m]?l[m]:m;}',
-					'eng' => 'function $L(m){var l={"december":"December"};return l[m]?l[m]:m;}',
-					'jpn' => 'function $L(m){var l={"december":"12\u6708"};return l[m]?l[m]:m;}',
-					'ukr' => 'function $L(m){var l={"december":"\u0413\u0440\u0443\u0434\u0435\u043d\u044c"};return l[m]?l[m]:m;}',
-					'urd' => 'function $L(m){var l={"december":"\u062f\u0633\u0645\u0628\u0631"};return l[m]?l[m]:m;}'
+					'deu' => 'function __(m){var l={"december":"Dezember"};return l[m]?l[m]:m;}',
+					'eng' => 'function __(m){var l={"december":"December"};return l[m]?l[m]:m;}',
+					'jpn' => 'function __(m){var l={"december":"12\u6708"};return l[m]?l[m]:m;}',
+					'ukr' => 'function __(m){var l={"december":"\u0413\u0440\u0443\u0434\u0435\u043d\u044c"};return l[m]?l[m]:m;}',
+					'urd' => 'function __(m){var l={"december":"\u062f\u0633\u0645\u0628\u0631"};return l[m]?l[m]:m;}'
 				)
 			)
 		);

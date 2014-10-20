@@ -23,6 +23,6 @@ $config += array(
 	"\n",
 	'path' => APP . 'Locale' . DS . '%s' . DS . 'LC_MESSAGES' . DS,
 	'jsPath' => APP . 'webroot' . DS . 'js' . DS . 'Locale' . DS . '%s' . DS . 'LC_MESSAGES' . DS,
-	'jsTemplate' => "function \$L(m){var l=%s;return l[m]?l[m]:m;}"
+	'jsTemplate' => "function \__(m){var l=%s;return l[m]?l[m]:m;}"
 );
 Configure::write('Localization', $config);
