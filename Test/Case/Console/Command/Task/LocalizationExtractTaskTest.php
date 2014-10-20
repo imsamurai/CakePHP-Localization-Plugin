@@ -53,6 +53,11 @@ class LocalizationExtractTaskTest extends CakeTestCase {
 			'conditions' => array(
 				'name LIKE' => '____T%'
 			),
+			'fields' => array(
+				'id',
+				'name',
+				'js'
+			),
 			'contain' => array(
 				'References'
 			)
@@ -60,17 +65,34 @@ class LocalizationExtractTaskTest extends CakeTestCase {
 
 		$mAlias = $this->Message->alias;
 		$rAlias = $this->Message->References->alias;
-		$this->assertCount(2, $testMessages);
-		$this->assertSame('____TestMessage', $testMessages[0][$mAlias]['name']);
+		$this->assertCount(4, $testMessages);		
+		
+		$this->assertSame('____TestMessageJS', $testMessages[0][$mAlias]['name']);
 		$this->assertCount(1, $testMessages[0][$rAlias]);
-		$this->assertSame('message.php', basename($testMessages[0][$rAlias][0]['file']));
-		$this->assertSame('6', $testMessages[0][$rAlias][0]['line']);
-		$this->assertSame('____TestMessage2', $testMessages[1][$mAlias]['name']);
-		$this->assertCount(2, $testMessages[1][$rAlias]);
-		$this->assertSame('message.php', basename($testMessages[1][$rAlias][0]['file']));
-		$this->assertSame('message.php', basename($testMessages[1][$rAlias][1]['file']));
-		$this->assertSame('7', $testMessages[1][$rAlias][0]['line']);
-		$this->assertSame('8', $testMessages[1][$rAlias][1]['line']);
+		$this->assertSame('message.js', basename($testMessages[0][$rAlias][0]['file']));
+		$this->assertSame('0', $testMessages[0][$rAlias][0]['line']);
+		$this->assertSame('JS', $testMessages[0][$rAlias][0]['comment']);
+		
+		$this->assertSame('____TestMessageJS2', $testMessages[1][$mAlias]['name']);
+		$this->assertCount(1, $testMessages[0][$rAlias]);
+		$this->assertSame('message.js', basename($testMessages[1][$rAlias][0]['file']));
+		$this->assertSame('0', $testMessages[1][$rAlias][0]['line']);
+		$this->assertSame('JS', $testMessages[1][$rAlias][0]['comment']);
+		
+		$this->assertSame('____TestMessage', $testMessages[2][$mAlias]['name']);
+		$this->assertCount(2, $testMessages[2][$rAlias]);
+		$this->assertSame('message.js', basename($testMessages[2][$rAlias][0]['file']));
+		$this->assertSame('0', $testMessages[2][$rAlias][0]['line']);
+		$this->assertSame('JS', $testMessages[2][$rAlias][0]['comment']);
+		$this->assertSame('message.php', basename($testMessages[2][$rAlias][1]['file']));
+		$this->assertSame('6', $testMessages[2][$rAlias][1]['line']);
+		
+		$this->assertSame('____TestMessage2', $testMessages[3][$mAlias]['name']);
+		$this->assertCount(2, $testMessages[3][$rAlias]);
+		$this->assertSame('message.php', basename($testMessages[3][$rAlias][0]['file']));
+		$this->assertSame('message.php', basename($testMessages[3][$rAlias][1]['file']));
+		$this->assertSame('7', $testMessages[3][$rAlias][0]['line']);
+		$this->assertSame('8', $testMessages[3][$rAlias][1]['line']);
 	}
 
 }

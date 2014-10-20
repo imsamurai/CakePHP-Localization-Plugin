@@ -19,7 +19,8 @@
 		}
 	],
 	"require": {
-		"composer/installers": "*"
+		"composer/installers": "*",
+		"squizlabs/php_codesniffer": "~1"
 	},
 	"support": {
 		"email": "im.samuray@gmail.com",
