@@ -26,10 +26,7 @@ then add plugin loading in Config/bootstrap.php
 
 add tables from `Config/Schema/localization.sql` and configure datasource `localization`
 
-include
-https://github.com/symfony/Process,
-https://github.com/mtdowling/cron-expression
- in your project, for ex with composer (tested with 2.3 version)
+Plugin requires squizlabs/php_codesniffer": "~1" for tokenize javascript
 
 ## Configuration
 
@@ -38,7 +35,9 @@ Write global config if you need to change plugin config (see plugin bootstrap.ph
 ## Usage
 
 Use `Localization` model for manage localization variables in DB.
-Just open `example.com/localization`
+Plugin works with `__*` style functions, also in javascript. Inline javascript are not supported (only *.js files).
+For php export from db will create/replace files in `app/Locale/*` and for js in `webroot/js/Locale/*` (you can change this in config, see bootstrap.php of the plugin).
+Just open `example.com/localization` for edit/translate/export to db
 
 For import/update all messages that used with `__*` functions (in php and js) use:
 
