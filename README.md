@@ -40,6 +40,6 @@ Write global config if you need to change plugin config (see plugin bootstrap.ph
 Use `Localization` model for manage localization variables in DB.
 Just open `example.com/localization`
 
-For import/update all messages that used with `__*` functions use:
+For import/update all messages that used with `__*` functions (in php and js) use:
 
 	Console/cake Localization.messages extract --output db <other params from i18n shell>
