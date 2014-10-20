@@ -73,10 +73,7 @@ git submodule add "git://github.com/imsamurai/CakePHP-Localization-Plugin.git" "
 
 <p>add tables from <code>Config/Schema/localization.sql</code> and configure datasource <code>localization</code></p>
 
-<p>include
-<a href="https://github.com/symfony/Process">https://github.com/symfony/Process</a>,
-<a href="https://github.com/mtdowling/cron-expression">https://github.com/mtdowling/cron-expression</a>
- in your project, for ex with composer (tested with 2.3 version)</p>
+<p>Plugin requires squizlabs/php_codesniffer": "~1" for tokenize javascript</p>
 
 <h2>
 <a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
@@ -87,9 +84,11 @@ git submodule add "git://github.com/imsamurai/CakePHP-Localization-Plugin.git" "
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Use <code>Localization</code> model for manage localization variables in DB.
-Just open <code>example.com/localization</code></p>
+Plugin works with <code>__*</code> style functions, also in javascript. Inline javascript are not supported (only <em>.js files).
+For php export from db will create/replace files in `app/Locale/</em><code>and for js in</code>webroot/js/Locale/*<code>(you can change this in config, see bootstrap.php of the plugin).
+Just open</code>example.com/localization` for edit/translate/export to db</p>
 
-<p>For import/update all messages that used with <code>__*</code> functions use:</p>
+<p>For import/update all messages that used with <code>__*</code> functions (in php and js) use:</p>
 
 <pre><code>Console/cake Localization.messages extract --output db &lt;other params from i18n shell&gt;
 </code></pre>
