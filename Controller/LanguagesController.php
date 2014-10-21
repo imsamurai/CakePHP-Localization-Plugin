@@ -64,7 +64,7 @@ class LanguagesController extends LocalizationAppController {
 		if (!$this->request->data) {
 			$data = $this->Language->read(null, $id);
 			if (!$data) {
-				throw new NotFoundException('Language not found!');
+				throw new NotFoundException(__('Language not found!'));
 			}
 			$this->request->data = $data;
 		}
@@ -80,16 +80,16 @@ class LanguagesController extends LocalizationAppController {
 	 */
 	public function delete($id) {
 		if (!$this->Language->findById($id)) {
-			throw new NotFoundException("Language #$id does not exists!");
+			throw new NotFoundException(__("Language #%s does not exists!", $id));
 		}
 		$success = $this->Language->delete($id);
 		if ($success) {
-			$this->Session->setFlash("Language #$id deleted", 'alert/simple', array(
-				'class' => 'alert-success', 'title' => 'Ok!'
+			$this->Session->setFlash(__("Language #%s deleted", $id), 'alert/simple', array(
+				'class' => 'alert-success', 'title' => __('Ok!')
 			));
 		} else {
-			$this->Session->setFlash("Can't delete language #$id!", 'alert/simple', array(
-				'class' => 'alert-error', 'title' => 'Error!'
+			$this->Session->setFlash(__("Can't delete language #%s!", $id), 'alert/simple', array(
+				'class' => 'alert-error', 'title' => __('Error!')
 			));
 		}
 
@@ -112,12 +112,12 @@ class LanguagesController extends LocalizationAppController {
 		$this->Language->id = $id;
 		$success = $this->Language->save($data, true, array('code', 'name'));
 		if ($success) {
-			$this->Session->setFlash("Language " . ($id ? 'saved' : 'created') . ". <a href=\"$createUrl\">Create new</a> or <a href=\"$listUrl\">view all</a>", 'alert/simple', array(
-				'class' => 'alert-success', 'title' => 'Ok!'
+			$this->Session->setFlash(__('Language %s. <a href="%s">Create new</a> or <a href="%s">view all</a>',  __($id ? 'saved' : 'created'), $createUrl, $listUrl), 'alert/simple', array(
+				'class' => 'alert-success', 'title' => __('Ok!')
 			));
 		} else {
-			$this->Session->setFlash("Can't " . ($id ? 'save' : 'create') . " language! You can <a href=\"$listUrl\">view all</a>", 'alert/simple', array(
-				'class' => 'alert-error', 'title' => 'Error!'
+			$this->Session->setFlash(__("Can't %s language! You can <a href=\"%\">view all</a>",  __($id ? 'save' : 'create'), $listUrl), 'alert/simple', array(
+				'class' => 'alert-error', 'title' => __('Error!')
 			));
 		}
 		$this->set('id', $this->Language->id);

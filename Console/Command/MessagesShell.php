@@ -34,9 +34,9 @@ class MessagesShell extends AppShell {
 	 */
 	public function getOptionParser() {
 		return parent::getOptionParser()
-						->description('Message Shell')
+						->description(__('Message Shell'))
 						->addSubcommand('extract', array(
-							'help' => __d('cake_console', 'Extract the po translations from your application'),
+							'help' => __('Extract the po translations from your application'),
 							'parser' => $this->Extract->getOptionParser()
 		));
 	}

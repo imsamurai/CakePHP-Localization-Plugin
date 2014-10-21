@@ -80,7 +80,7 @@ class MessagesController extends LocalizationAppController {
 		if (!$this->request->data) {
 			$data = $this->Message->getById($id);
 			if (!$data) {
-				throw new NotFoundException('Message not found!');
+				throw new NotFoundException(__("Message #%s does not exists!", $id));
 			}
 			$this->request->data = $data;
 		}
@@ -102,12 +102,12 @@ class MessagesController extends LocalizationAppController {
 	 */
 	public function export() {
 		if ($this->Message->export()) {
-			$this->Session->setFlash("Messages exported successfully!", 'alert/simple', array(
-				'class' => 'alert-success', 'title' => 'Ok!'
+			$this->Session->setFlash(__("Messages exported successfully!"), 'alert/simple', array(
+				'class' => 'alert-success', 'title' => __('Ok!')
 			));
 		} else {
-			$this->Session->setFlash("Can't export messages!", 'alert/simple', array(
-				'class' => 'alert-error', 'title' => 'Error!'
+			$this->Session->setFlash(__("Can't export messages!"), 'alert/simple', array(
+				'class' => 'alert-error', 'title' => __('Error!')
 			));
 		}
 		$this->redirect($this->referer());
@@ -121,16 +121,16 @@ class MessagesController extends LocalizationAppController {
 	 */
 	public function delete($id) {
 		if (!$this->Message->findById($id)) {
-			throw new NotFoundException("Message #$id does not exists!");
+			throw new NotFoundException(__("Message #%s does not exists!", $id));
 		}
 		$success = $this->Message->delete($id);
 		if ($success) {
-			$this->Session->setFlash("Message #$id deleted", 'alert/simple', array(
-				'class' => 'alert-success', 'title' => 'Ok!'
+			$this->Session->setFlash(__("Message #%s deleted", $id), 'alert/simple', array(
+				'class' => 'alert-success', 'title' => __('Ok!')
 			));
 		} else {
-			$this->Session->setFlash("Can't delete message #$id!", 'alert/simple', array(
-				'class' => 'alert-error', 'title' => 'Error!'
+			$this->Session->setFlash(__("Can't delete message #%s!", $id), 'alert/simple', array(
+				'class' => 'alert-error', 'title' => __('Error!')
 			));
 		}
 
@@ -153,13 +153,13 @@ class MessagesController extends LocalizationAppController {
 		$this->Message->id = $id;
 		$success = $this->Message->saveAssociatedChanged($data);
 		if ($success) {
-			$this->Session->setFlash("Message " . ($id ? 'saved' : 'created') . ". <a href=\"$createUrl\">Create new</a> or <a href=\"$listUrl\">view all</a>", 'alert/simple', array(
-				'class' => 'alert-success', 'title' => 'Ok!'
+			$this->Session->setFlash(__("Message %s. <a href=\"%s\">Create new</a> or <a href=\"%s\">view all</a>", __($id ? 'saved' : 'created'), $createUrl, $listUrl), 'alert/simple', array(
+				'class' => 'alert-success', 'title' => __('Ok!')
 			));
 			$this->redirect(array('action' => 'edit', $this->Message->id));
 		} else {
-			$this->Session->setFlash("Can't " . ($id ? 'save' : 'create') . " message! You can <a href=\"$listUrl\">view all</a>", 'alert/simple', array(
-				'class' => 'alert-error', 'title' => 'Error!'
+			$this->Session->setFlash(__("Can't %s message! You can <a href=\"%s\">view all</a>",  __($id ? 'save' : 'create'), $listUrl), 'alert/simple', array(
+				'class' => 'alert-error', 'title' => __('Error!')
 			));
 		}
 		$this->set('id', $this->Message->id);

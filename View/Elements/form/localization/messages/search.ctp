@@ -5,7 +5,7 @@
  * Time: 5:50:39 PM
  * Format: http://book.cakephp.org/2.0/en/views.html
  * 
- * @package Localization.View
+ * @package Localization.View.Element
  */
 /* @var $this View */
 
@@ -54,7 +54,7 @@ echo $this->Form->create('Message', array(
 		$this->Form->input('not_translated_language_id', array(
 			'type' => 'select',
 			'multiple' => true,
-			'options' => $languages
+			'options' => array_map('__', $languages)
 		));
 		?>
 	</div>
@@ -62,8 +62,8 @@ echo $this->Form->create('Message', array(
 <div style="clear:left;"></div>
 <div style="float:left;width:415px;">
 	<div class="div-right">
-		<?= $this->Form->button('Search', array('class' => 'btn btn-primary', 'div' => false)); ?>
-		<?= $this->Html->link('Clear', array('action' => 'index'), array('class' => 'btn', 'id' => "btn-clear")); ?>
+		<?= $this->Form->button(__('Search'), array('class' => 'btn btn-primary', 'div' => false)); ?>
+		<?= $this->Html->link(__('Clear'), array('action' => 'index'), array('class' => 'btn', 'id' => "btn-clear")); ?>
 	</div>
 </div>
 <div style="clear:left;"></div>

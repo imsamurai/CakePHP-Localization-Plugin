@@ -5,12 +5,12 @@
  * Time: 6:28:14 PM
  * Format: http://book.cakephp.org/2.0/en/views.html
  * 
+ * @package Localization.View
  */
-/* @var $this View */
 ?>
-<h1>Languages</h1>
+<h1><?= __('Languages'); ?></h1>
 <?php
-echo $this->Html->link('Create', array(
+echo $this->Html->link(__('Create'), array(
 	'controller' => 'languages',
 	'action' => 'create'
 		), array('class' => 'btn'));
@@ -36,18 +36,18 @@ echo $this->element('pagination/pagination');
 			?>
 			<tr>
 				<td><?= $language['id']; ?></td>
-				<td><?= $this->Html->link($language['name'], array('action' => 'edit', $language['id'])); ?></td>
+				<td><?= $this->Html->link(__($language['name']), array('action' => 'edit', $language['id'])); ?></td>
 				<td><?= $language['code']; ?></td>
 				<td title="<?= $language['created']; ?>"><?= $this->Time->timeAgoInWords($language['created']); ?></td>
 				<td title="<?= $language['modified']; ?>"><?= $this->Time->timeAgoInWords($language['modified']); ?></td>
 				<td>
 					<div class="btn-group"><button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-tasks"></i><span class="caret"></span></button>
 						<ul class="dropdown-menu pull-right">
-							<?= $this->Html->tag('li', $this->Html->link('Edit', array('action' => 'edit', $language['id']))); ?>
+							<?= $this->Html->tag('li', $this->Html->link(__('Edit'), array('action' => 'edit', $language['id']))); ?>
 							<?=
-							$this->Html->tag('li', $this->Html->link('Delete', array('action' => 'delete', $language['id']), array(
+							$this->Html->tag('li', $this->Html->link(__('Delete'), array('action' => 'delete', $language['id']), array(
 										'class' => 'btn-danger'
-											), "Are you sure want to delete {$language['name']} language?")
+											), __("Are you sure want to delete %s language?", __($language['name'])))
 							);
 							?>
 						</ul>

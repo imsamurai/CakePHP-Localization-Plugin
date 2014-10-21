@@ -5,7 +5,7 @@
  * Time: 14:30:07
  * Format: http://book.cakephp.org/2.0/en/views.html
  *
- * @package Localization.View
+ * @package Localization.View.Element
  */
 ?>
-<div class="alert">no data <?= isset($message) ? $message : ''; ?></div>
+<div class="alert"><?= __('no data') . (isset($message) ? ' ' . $message : ''); ?></div>

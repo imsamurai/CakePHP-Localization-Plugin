@@ -46,9 +46,9 @@ class LocalizationExtractTask extends ExtractTask {
 	 */
 	public function getOptionParser() {
 		return parent::getOptionParser()
-						->description('Language String Extraction')
+						->description(__('Language String Extraction'))
 						->addOption('output', array(
-							'help' => __d('cake_console', 'Full path to output directory. Or `db` for database.')
+							'help' => __('Full path to output directory. Or `db` for database.')
 		));
 	}
 
@@ -76,7 +76,7 @@ class LocalizationExtractTask extends ExtractTask {
 
 		$this->out();
 		$this->out();
-		$this->out(__d('cake_console', 'Extracting...'));
+		$this->out(__('Extracting...'));
 		$this->hr();
 		$this->_extractTokens();
 		$this->_extractValidationMessages();
@@ -85,7 +85,7 @@ class LocalizationExtractTask extends ExtractTask {
 		$this->_translations = $this->_tokens = array();
 		$this->_extractValidation = true;
 		$this->out();
-		$this->out(__d('cake_console', 'Done.'));
+		$this->out(__('Done.'));
 	}
 
 	/**
@@ -127,7 +127,7 @@ class LocalizationExtractTask extends ExtractTask {
 	protected function _extractTokens() {
 		foreach ($this->_files as $file) {
 			$this->_file = $file;
-			$this->out(__d('cake_console', 'Processing %s...', $file));
+			$this->out(__('Processing %s...', $file));
 
 			$allTokens = $this->_getTokens($file);
 

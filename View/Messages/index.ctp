@@ -5,20 +5,20 @@
  * Time: 6:28:14 PM
  * Format: http://book.cakephp.org/2.0/en/views.html
  * 
+ * @package Localization.View
  */
-/* @var $this View */
 ?>
-<h1>Messages</h1>
+<h1><?= __('Messages'); ?></h1>
 <?php
 echo $this->element('form/localization/messages/search');
-echo $this->Html->link('Create', array(
+echo $this->Html->link(__('Create'), array(
 	'controller' => 'messages',
 	'action' => 'create'
 		), array('class' => 'btn'));
-echo $this->Html->link('Export all', array(
+echo $this->Html->link(__('Export all'), array(
 	'controller' => 'messages',
 	'action' => 'export'
-		), array('class' => 'btn btn-inverse'), "Are you sure want to export all messages?");
+		), array('class' => 'btn btn-inverse'), __("Are you sure want to export all messages?"));
 
 echo $this->element('pagination/pagination');
 ?>
@@ -29,11 +29,11 @@ echo $this->element('pagination/pagination');
 			<th><?= $this->Paginator->sort('id'); ?></th>	
 			<th><?= $this->Paginator->sort('name'); ?></th>	
 			<th><?= $this->Paginator->sort('js'); ?></th>		
-			<th>Not translated to</th>
-			<th>References</th>
+			<th><?= __('Not translated to'); ?></th>
+			<th><?= __('References'); ?></th>
 			<th><?= $this->Paginator->sort('created'); ?></th>
 			<th><?= $this->Paginator->sort('modified'); ?></th>
-			<th>Actions</th>
+			<th><?= __('Actions'); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -46,7 +46,7 @@ echo $this->element('pagination/pagination');
 			<tr>
 				<td><?= $message['id']; ?></td>
 				<td><?= $this->Html->link($message['name'], array('action' => 'edit', $message['id'])); ?></td>
-				<td><?= $message['js'] ? 'yes' : 'no'; ?></td>
+				<td><?= __($message['js'] ? 'yes' : 'no'); ?></td>
 				<td><?= implode(', ', $notTranslatedLangguages); ?></td>
 				<td><?=
 					$this->element('localization/messages/references', array(
@@ -58,11 +58,11 @@ echo $this->element('pagination/pagination');
 				<td>
 					<div class="btn-group"><button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-tasks"></i><span class="caret"></span></button>
 						<ul class="dropdown-menu pull-right">
-							<?= $this->Html->tag('li', $this->Html->link('Edit', array('action' => 'edit', $message['id']))); ?>
+							<?= $this->Html->tag('li', $this->Html->link(__('Edit'), array('action' => 'edit', $message['id']))); ?>
 							<?=
-							$this->Html->tag('li', $this->Html->link('Delete', array('action' => 'delete', $message['id']), array(
+							$this->Html->tag('li', $this->Html->link(__('Delete'), array('action' => 'delete', $message['id']), array(
 										'class' => 'btn-danger'
-											), "Are you sure want to delete " . Configure::read('Localization.prefix') . $message['id'] . " message?")
+											), __("Are you sure want to delete '%s' message?", $message['name']))
 							);
 							?>
 						</ul>

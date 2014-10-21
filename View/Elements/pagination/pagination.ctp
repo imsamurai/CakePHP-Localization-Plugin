@@ -4,7 +4,7 @@
  * Date: 20.04.2012
  * Time: 12:59:13
  * 
- * @package Task.View.Element
+ * @package Localization.View.Element
  */
 ?>
 <div class="pagination pagination-right">
@@ -22,8 +22,8 @@
     </ul>
 	<?php
 	echo $this->Html->div('pull-left', $this->Paginator->counter(array(
-				'format' => 'Page {:page} of {:pages}, showing {:current} records out of
-             {:count} total, starting on record {:start}, ending on {:end}'
+				'format' => __('Page {:page} of {:pages}, showing {:current} records out of
+             {:count} total, starting on record {:start}, ending on {:end}')
 			)), array('style' => 'margin-top:17px;'));
 	?>
 </div>
