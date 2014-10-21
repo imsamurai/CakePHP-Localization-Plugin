@@ -162,7 +162,7 @@ class Message extends LocalizationAppModel {
 		$LocaleFile = new File($path . 'default.po', true);
 		$success = $LocaleFile->write(Configure::read('Localization.header'));
 		foreach ($data as $msgid => $msgstr) {
-			$success = $success && $LocaleFile->append("msgid \"" . addcslashes($msgid, '"') . "\"\n");
+			$success = $success && $LocaleFile->append("msgid \"" . $msgid . "\"\n");
 			$success = $success && $LocaleFile->append($this->_buildMsgstr($msgstr) . "\n");
 		}
 		$LocaleFile->close();
