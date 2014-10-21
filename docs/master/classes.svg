@@ -20,256 +20,256 @@
 <path fill="none" stroke="gray" d="M302,-326C302,-320 308,-314 314,-314"/>
 <text text-anchor="middle" x="576" y="-1346.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">Global</text>
 </g>
-<!-- \\MessagesController -->
-<g id="node2" class="node"><title>\\MessagesController</title>
-<polygon fill="none" stroke="black" points="811,-1330 673,-1330 673,-1294 811,-1294 811,-1330"/>
-<text text-anchor="middle" x="742" y="-1309.1" font-family="Courier,monospace" font-size="11.00">MessagesController</text>
+<!-- \\TranslationFixture -->
+<g id="node2" class="node"><title>\\TranslationFixture</title>
+<polygon fill="none" stroke="black" points="811,-952 673,-952 673,-916 811,-916 811,-952"/>
+<text text-anchor="middle" x="742" y="-931.1" font-family="Courier,monospace" font-size="11.00">TranslationFixture</text>
 </g>
-<!-- \\LocalizationAppController -->
-<g id="node4" class="node"><title>\\LocalizationAppController</title>
-<polygon fill="none" stroke="black" points="495,-1276 311,-1276 311,-1240 495,-1240 495,-1276"/>
-<text text-anchor="middle" x="403" y="-1255.1" font-family="Courier,monospace" font-size="11.00">LocalizationAppController</text>
+<!-- \\CakeTestFixture -->
+<g id="node24" class="node"><title>\\CakeTestFixture</title>
+<ellipse fill="none" stroke="black" cx="403" cy="-288" rx="92.1303" ry="18.3848"/>
+<text text-anchor="middle" x="403" y="-284.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\CakeTestFixture</text>
 </g>
-<!-- \\MessagesController&#45;&gt;\\LocalizationAppController -->
-<g id="edge3" class="edge"><title>\\MessagesController&#45;&gt;\\LocalizationAppController</title>
-<path fill="none" stroke="black" d="M672.99,-1301.01C624.876,-1293.34 559.856,-1282.99 505.68,-1274.36"/>
-<polygon fill="none" stroke="black" points="506.122,-1270.88 495.696,-1272.77 505.021,-1277.8 506.122,-1270.88"/>
+<!-- \\TranslationFixture&#45;&gt;\\CakeTestFixture -->
+<g id="edge3" class="edge"><title>\\TranslationFixture&#45;&gt;\\CakeTestFixture</title>
+<path fill="none" stroke="black" d="M672.878,-926.844C661.13,-922.667 650.121,-916.381 642,-907 467.074,-704.944 757.94,-500.011 570,-310 550.128,-289.909 521.463,-281.851 493.475,-279.604"/>
+<polygon fill="none" stroke="black" points="493.392,-276.094 483.212,-279.028 493,-283.083 493.392,-276.094"/>
 </g>
-<!-- \\LocalizationController -->
-<g id="node3" class="node"><title>\\LocalizationController</title>
-<polygon fill="none" stroke="black" points="824,-1276 660,-1276 660,-1240 824,-1240 824,-1276"/>
-<text text-anchor="middle" x="742" y="-1255.1" font-family="Courier,monospace" font-size="11.00">LocalizationController</text>
+<!-- \\MessageReferenceFixture -->
+<g id="node3" class="node"><title>\\MessageReferenceFixture</title>
+<polygon fill="none" stroke="black" points="828,-898 656,-898 656,-862 828,-862 828,-898"/>
+<text text-anchor="middle" x="742" y="-877.1" font-family="Courier,monospace" font-size="11.00">MessageReferenceFixture</text>
 </g>
-<!-- \\LocalizationController&#45;&gt;\\LocalizationAppController -->
-<g id="edge5" class="edge"><title>\\LocalizationController&#45;&gt;\\LocalizationAppController</title>
-<path fill="none" stroke="black" d="M659.071,-1258C612.767,-1258 554.681,-1258 505.541,-1258"/>
-<polygon fill="none" stroke="black" points="505.519,-1254.5 495.519,-1258 505.519,-1261.5 505.519,-1254.5"/>
+<!-- \\MessageReferenceFixture&#45;&gt;\\CakeTestFixture -->
+<g id="edge5" class="edge"><title>\\MessageReferenceFixture&#45;&gt;\\CakeTestFixture</title>
+<path fill="none" stroke="black" d="M655.913,-864.677C650.752,-861.452 646.029,-857.599 642,-853 481.575,-669.889 742.215,-482.069 570,-310 550.194,-290.21 521.844,-282.146 494.111,-279.805"/>
+<polygon fill="none" stroke="black" points="494.132,-276.3 483.939,-279.19 493.709,-283.287 494.132,-276.3"/>
 </g>
-<!-- \\AppController -->
-<g id="node26" class="node"><title>\\AppController</title>
-<ellipse fill="none" stroke="black" cx="82" cy="-1258" rx="82.0244" ry="18.3848"/>
-<text text-anchor="middle" x="82" y="-1254.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\AppController</text>
+<!-- \\MessageFixture -->
+<g id="node4" class="node"><title>\\MessageFixture</title>
+<polygon fill="none" stroke="black" points="797,-844 687,-844 687,-808 797,-808 797,-844"/>
+<text text-anchor="middle" x="742" y="-823.1" font-family="Courier,monospace" font-size="11.00">MessageFixture</text>
 </g>
-<!-- \\LocalizationAppController&#45;&gt;\\AppController -->
-<g id="edge7" class="edge"><title>\\LocalizationAppController&#45;&gt;\\AppController</title>
-<path fill="none" stroke="black" d="M310.153,-1258C267.47,-1258 216.972,-1258 174.35,-1258"/>
-<polygon fill="none" stroke="black" points="174.258,-1254.5 164.258,-1258 174.258,-1261.5 174.258,-1254.5"/>
+<!-- \\MessageFixture&#45;&gt;\\CakeTestFixture -->
+<g id="edge7" class="edge"><title>\\MessageFixture&#45;&gt;\\CakeTestFixture</title>
+<path fill="none" stroke="black" d="M686.299,-822.486C669.871,-818.705 653.29,-811.701 642,-799 496.056,-634.811 726.511,-464.149 570,-310 550.145,-290.445 521.931,-282.4 494.332,-280.006"/>
+<polygon fill="none" stroke="black" points="494.408,-276.504 484.208,-279.368 493.968,-283.49 494.408,-276.504"/>
 </g>
-<!-- \\LanguagesController -->
-<g id="node5" class="node"><title>\\LanguagesController</title>
-<polygon fill="none" stroke="black" points="814,-1222 670,-1222 670,-1186 814,-1186 814,-1222"/>
-<text text-anchor="middle" x="742" y="-1201.1" font-family="Courier,monospace" font-size="11.00">LanguagesController</text>
+<!-- \\LanguageFixture -->
+<g id="node5" class="node"><title>\\LanguageFixture</title>
+<polygon fill="none" stroke="black" points="801,-790 683,-790 683,-754 801,-754 801,-790"/>
+<text text-anchor="middle" x="742" y="-769.1" font-family="Courier,monospace" font-size="11.00">LanguageFixture</text>
 </g>
-<!-- \\LanguagesController&#45;&gt;\\LocalizationAppController -->
-<g id="edge9" class="edge"><title>\\LanguagesController&#45;&gt;\\LocalizationAppController</title>
-<path fill="none" stroke="black" d="M669.276,-1215.58C621.573,-1223.18 558.491,-1233.23 505.7,-1241.64"/>
-<polygon fill="none" stroke="black" points="504.953,-1238.22 495.628,-1243.25 506.054,-1245.13 504.953,-1238.22"/>
+<!-- \\LanguageFixture&#45;&gt;\\CakeTestFixture -->
+<g id="edge9" class="edge"><title>\\LanguageFixture&#45;&gt;\\CakeTestFixture</title>
+<path fill="none" stroke="black" d="M682.784,-767.47C667.581,-763.513 652.558,-756.667 642,-745 510.508,-599.701 710.838,-446.259 570,-310 550.158,-290.804 522.24,-282.774 494.9,-280.285"/>
+<polygon fill="none" stroke="black" points="495.082,-276.789 484.87,-279.608 494.611,-283.773 495.082,-276.789"/>
 </g>
-<!-- \\LocalizationExtractTask -->
-<g id="node6" class="node"><title>\\LocalizationExtractTask</title>
-<polygon fill="none" stroke="black" points="828,-952 656,-952 656,-916 828,-916 828,-952"/>
-<text text-anchor="middle" x="742" y="-931.1" font-family="Courier,monospace" font-size="11.00">LocalizationExtractTask</text>
+<!-- \\MessageTest -->
+<g id="node6" class="node"><title>\\MessageTest</title>
+<polygon fill="none" stroke="black" points="787,-736 697,-736 697,-700 787,-700 787,-736"/>
+<text text-anchor="middle" x="742" y="-715.1" font-family="Courier,monospace" font-size="11.00">MessageTest</text>
 </g>
-<!-- \\ExtractTask -->
-<g id="node29" class="node"><title>\\ExtractTask</title>
-<ellipse fill="none" stroke="black" cx="403" cy="-288" rx="70.9184" ry="18.3848"/>
-<text text-anchor="middle" x="403" y="-284.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\ExtractTask</text>
+<!-- \\CakeTestCase -->
+<g id="node29" class="node"><title>\\CakeTestCase</title>
+<ellipse fill="none" stroke="black" cx="403" cy="-234" rx="82.0244" ry="18.3848"/>
+<text text-anchor="middle" x="403" y="-230.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\CakeTestCase</text>
 </g>
-<!-- \\LocalizationExtractTask&#45;&gt;\\ExtractTask -->
-<g id="edge11" class="edge"><title>\\LocalizationExtractTask&#45;&gt;\\ExtractTask</title>
-<path fill="none" stroke="black" d="M655.852,-918.731C650.705,-915.493 646.002,-911.623 642,-907 467.074,-704.944 757.94,-500.011 570,-310 545.865,-285.599 508.762,-278.947 475.653,-278.899"/>
-<polygon fill="none" stroke="black" points="475.459,-275.402 465.524,-279.084 475.586,-282.401 475.459,-275.402"/>
+<!-- \\MessageTest&#45;&gt;\\CakeTestCase -->
+<g id="edge11" class="edge"><title>\\MessageTest&#45;&gt;\\CakeTestCase</title>
+<path fill="none" stroke="black" d="M696.284,-716.271C676.919,-713.141 655.71,-706.121 642,-691 511.845,-547.448 707.401,-397.632 570,-261 549.228,-240.345 519.293,-231.686 490.486,-228.811"/>
+<polygon fill="none" stroke="black" points="490.602,-225.31 480.361,-228.025 490.061,-232.289 490.602,-225.31"/>
 </g>
-<!-- \\MessagesShell -->
-<g id="node7" class="node"><title>\\MessagesShell</title>
-<polygon fill="none" stroke="black" points="794,-898 690,-898 690,-862 794,-862 794,-898"/>
-<text text-anchor="middle" x="742" y="-877.1" font-family="Courier,monospace" font-size="11.00">MessagesShell</text>
+<!-- \\LanguageTest -->
+<g id="node7" class="node"><title>\\LanguageTest</title>
+<polygon fill="none" stroke="black" points="791,-682 693,-682 693,-646 791,-646 791,-682"/>
+<text text-anchor="middle" x="742" y="-661.1" font-family="Courier,monospace" font-size="11.00">LanguageTest</text>
 </g>
-<!-- \\AppShell -->
-<g id="node31" class="node"><title>\\AppShell</title>
-<ellipse fill="none" stroke="black" cx="403" cy="-234" rx="56.7776" ry="18.3848"/>
-<text text-anchor="middle" x="403" y="-230.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\AppShell</text>
-</g>
-<!-- \\MessagesShell&#45;&gt;\\AppShell -->
-<g id="edge13" class="edge"><title>\\MessagesShell&#45;&gt;\\AppShell</title>
-<path fill="none" stroke="black" d="M689.756,-877.44C672.148,-873.894 653.954,-866.794 642,-853 468.418,-652.699 753.703,-452.061 570,-261 543.97,-233.927 502.275,-227.164 467.06,-227.176"/>
-<polygon fill="none" stroke="black" points="466.776,-223.68 456.842,-227.364 466.905,-230.679 466.776,-223.68"/>
-</g>
-<!-- \\Message -->
-<g id="node8" class="node"><title>\\Message</title>
-<polygon fill="none" stroke="black" points="774,-1168 710,-1168 710,-1132 774,-1132 774,-1168"/>
-<text text-anchor="middle" x="742" y="-1147.1" font-family="Courier,monospace" font-size="11.00">Message</text>
-</g>
-<!-- \\LocalizationAppModel -->
-<g id="node11" class="node"><title>\\LocalizationAppModel</title>
-<polygon fill="none" stroke="black" points="479,-1087 327,-1087 327,-1051 479,-1051 479,-1087"/>
-<text text-anchor="start" x="369" y="-1074.43" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="335" y="-1061.23" font-family="Courier,monospace" font-size="11.00">LocalizationAppModel</text>
-</g>
-<!-- \\Message&#45;&gt;\\LocalizationAppModel -->
-<g id="edge15" class="edge"><title>\\Message&#45;&gt;\\LocalizationAppModel</title>
-<path fill="none" stroke="black" d="M709.802,-1142.31C659.448,-1130.28 560.384,-1106.61 488.411,-1089.41"/>
-<polygon fill="none" stroke="black" points="488.983,-1085.95 478.443,-1087.03 487.356,-1092.75 488.983,-1085.95"/>
-</g>
-<!-- \\MessageReference -->
-<g id="node9" class="node"><title>\\MessageReference</title>
-<polygon fill="none" stroke="black" points="804,-1114 680,-1114 680,-1078 804,-1078 804,-1114"/>
-<text text-anchor="middle" x="742" y="-1093.1" font-family="Courier,monospace" font-size="11.00">MessageReference</text>
-</g>
-<!-- \\MessageReference&#45;&gt;\\LocalizationAppModel -->
-<g id="edge17" class="edge"><title>\\MessageReference&#45;&gt;\\LocalizationAppModel</title>
-<path fill="none" stroke="black" d="M679.427,-1091.02C626.167,-1086.77 549.099,-1080.64 489.861,-1075.92"/>
-<polygon fill="none" stroke="black" points="490.014,-1072.42 479.768,-1075.11 489.458,-1079.4 490.014,-1072.42"/>
-</g>
-<!-- \\Language -->
-<g id="node10" class="node"><title>\\Language</title>
-<polygon fill="none" stroke="black" points="777,-1060 707,-1060 707,-1024 777,-1024 777,-1060"/>
-<text text-anchor="middle" x="742" y="-1039.1" font-family="Courier,monospace" font-size="11.00">Language</text>
-</g>
-<!-- \\Language&#45;&gt;\\LocalizationAppModel -->
-<g id="edge19" class="edge"><title>\\Language&#45;&gt;\\LocalizationAppModel</title>
-<path fill="none" stroke="black" d="M706.362,-1044.84C655.405,-1048.9 560.132,-1056.49 489.9,-1062.08"/>
-<polygon fill="none" stroke="black" points="489.419,-1058.61 479.728,-1062.89 489.975,-1065.58 489.419,-1058.61"/>
-</g>
-<!-- \\AppModel -->
-<g id="node36" class="node"><title>\\AppModel</title>
-<ellipse fill="none" stroke="black" cx="82" cy="-1069" rx="62.2254" ry="18.3848"/>
-<text text-anchor="middle" x="82" y="-1065.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\AppModel</text>
-</g>
-<!-- \\LocalizationAppModel&#45;&gt;\\AppModel -->
-<g id="edge21" class="edge"><title>\\LocalizationAppModel&#45;&gt;\\AppModel</title>
-<path fill="none" stroke="black" d="M326.113,-1069C273.969,-1069 205.489,-1069 154.334,-1069"/>
-<polygon fill="none" stroke="black" points="154.019,-1065.5 144.019,-1069 154.019,-1072.5 154.019,-1065.5"/>
-</g>
-<!-- \\Translation -->
-<g id="node12" class="node"><title>\\Translation</title>
-<polygon fill="none" stroke="black" points="787,-1006 697,-1006 697,-970 787,-970 787,-1006"/>
-<text text-anchor="middle" x="742" y="-985.1" font-family="Courier,monospace" font-size="11.00">Translation</text>
-</g>
-<!-- \\Translation&#45;&gt;\\LocalizationAppModel -->
-<g id="edge23" class="edge"><title>\\Translation&#45;&gt;\\LocalizationAppModel</title>
-<path fill="none" stroke="black" d="M696.493,-998.703C679.244,-1003.17 659.541,-1008.78 642,-1015 608.998,-1026.71 603.706,-1037.5 570,-1047 544.405,-1054.21 515.923,-1059.07 489.835,-1062.35"/>
-<polygon fill="none" stroke="black" points="489.1,-1058.91 479.584,-1063.57 489.928,-1065.86 489.1,-1058.91"/>
+<!-- \\LanguageTest&#45;&gt;\\CakeTestCase -->
+<g id="edge13" class="edge"><title>\\LanguageTest&#45;&gt;\\CakeTestCase</title>
+<path fill="none" stroke="black" d="M692.85,-661.492C674.524,-658.068 655.028,-651.037 642,-637 526.253,-512.29 692.039,-379.561 570,-261 549.178,-240.771 519.538,-232.138 490.994,-229.163"/>
+<polygon fill="none" stroke="black" points="491.213,-225.669 480.959,-228.336 490.638,-232.645 491.213,-225.669"/>
 </g>
 <!-- \\MessagesControllerTest -->
-<g id="node13" class="node"><title>\\MessagesControllerTest</title>
-<polygon fill="none" stroke="black" points="824,-844 660,-844 660,-808 824,-808 824,-844"/>
-<text text-anchor="middle" x="742" y="-823.1" font-family="Courier,monospace" font-size="11.00">MessagesControllerTest</text>
+<g id="node8" class="node"><title>\\MessagesControllerTest</title>
+<polygon fill="none" stroke="black" points="824,-574 660,-574 660,-538 824,-538 824,-574"/>
+<text text-anchor="middle" x="742" y="-553.1" font-family="Courier,monospace" font-size="11.00">MessagesControllerTest</text>
 </g>
 <!-- \\ControllerTestCase -->
-<g id="node39" class="node"><title>\\ControllerTestCase</title>
+<g id="node32" class="node"><title>\\ControllerTestCase</title>
 <ellipse fill="none" stroke="black" cx="403" cy="-180" rx="106.773" ry="18.3848"/>
 <text text-anchor="middle" x="403" y="-176.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\ControllerTestCase</text>
 </g>
 <!-- \\MessagesControllerTest&#45;&gt;\\ControllerTestCase -->
-<g id="edge25" class="edge"><title>\\MessagesControllerTest&#45;&gt;\\ControllerTestCase</title>
-<path fill="none" stroke="black" d="M659.091,-812.646C652.675,-809.051 646.829,-804.572 642,-799 468.418,-598.699 753.703,-398.061 570,-207 556.156,-192.602 537.882,-183.948 518.507,-179.003"/>
-<polygon fill="none" stroke="black" points="519.131,-175.556 508.61,-176.804 517.613,-182.389 519.131,-175.556"/>
+<g id="edge15" class="edge"><title>\\MessagesControllerTest&#45;&gt;\\ControllerTestCase</title>
+<path fill="none" stroke="black" d="M659.184,-541.869C652.835,-538.428 646.974,-534.196 642,-529 540.598,-423.064 676.742,-307.553 570,-207 555.982,-193.795 538.19,-185.583 519.475,-180.673"/>
+<polygon fill="none" stroke="black" points="520.151,-177.237 509.62,-178.398 518.576,-184.058 520.151,-177.237"/>
 </g>
 <!-- \\LanguagesControllerTest -->
-<g id="node14" class="node"><title>\\LanguagesControllerTest</title>
-<polygon fill="none" stroke="black" points="828,-790 656,-790 656,-754 828,-754 828,-790"/>
-<text text-anchor="middle" x="742" y="-769.1" font-family="Courier,monospace" font-size="11.00">LanguagesControllerTest</text>
+<g id="node9" class="node"><title>\\LanguagesControllerTest</title>
+<polygon fill="none" stroke="black" points="828,-520 656,-520 656,-484 828,-484 828,-520"/>
+<text text-anchor="middle" x="742" y="-499.1" font-family="Courier,monospace" font-size="11.00">LanguagesControllerTest</text>
 </g>
 <!-- \\LanguagesControllerTest&#45;&gt;\\ControllerTestCase -->
-<g id="edge27" class="edge"><title>\\LanguagesControllerTest&#45;&gt;\\ControllerTestCase</title>
-<path fill="none" stroke="black" d="M655.919,-756.672C650.757,-753.448 646.032,-749.596 642,-745 482.917,-563.642 738.244,-379.893 570,-207 556.07,-192.685 537.755,-184.07 518.368,-179.138"/>
-<polygon fill="none" stroke="black" points="518.986,-175.69 508.466,-176.943 517.472,-182.524 518.986,-175.69"/>
+<g id="edge17" class="edge"><title>\\LanguagesControllerTest&#45;&gt;\\ControllerTestCase</title>
+<path fill="none" stroke="black" d="M655.637,-485.512C650.679,-482.547 646.066,-479.072 642,-475 554.844,-387.735 661.55,-289.644 570,-207 555.956,-194.322 538.404,-186.315 520,-181.431"/>
+<polygon fill="none" stroke="black" points="520.545,-177.964 510.01,-179.091 518.948,-184.779 520.545,-177.964"/>
 </g>
 <!-- \\LocalizationExtractTaskTest -->
-<g id="node15" class="node"><title>\\LocalizationExtractTaskTest</title>
-<polygon fill="none" stroke="black" points="841,-736 643,-736 643,-700 841,-700 841,-736"/>
-<text text-anchor="middle" x="742" y="-715.1" font-family="Courier,monospace" font-size="11.00">LocalizationExtractTaskTest</text>
-</g>
-<!-- \\CakeTestCase -->
-<g id="node42" class="node"><title>\\CakeTestCase</title>
-<ellipse fill="none" stroke="black" cx="403" cy="-126" rx="82.0244" ry="18.3848"/>
-<text text-anchor="middle" x="403" y="-122.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\CakeTestCase</text>
+<g id="node10" class="node"><title>\\LocalizationExtractTaskTest</title>
+<polygon fill="none" stroke="black" points="841,-628 643,-628 643,-592 841,-592 841,-628"/>
+<text text-anchor="middle" x="742" y="-607.1" font-family="Courier,monospace" font-size="11.00">LocalizationExtractTaskTest</text>
 </g>
 <!-- \\LocalizationExtractTaskTest&#45;&gt;\\CakeTestCase -->
-<g id="edge29" class="edge"><title>\\LocalizationExtractTaskTest&#45;&gt;\\CakeTestCase</title>
-<path fill="none" stroke="black" d="M651.916,-699.978C648.304,-697.357 644.965,-694.38 642,-691 482.917,-509.642 738.244,-325.893 570,-153 549.387,-131.818 519.174,-123.117 490.093,-120.358"/>
-<polygon fill="none" stroke="black" points="490.098,-116.849 479.872,-119.619 489.593,-123.831 490.098,-116.849"/>
-</g>
-<!-- \\MessageTest -->
-<g id="node16" class="node"><title>\\MessageTest</title>
-<polygon fill="none" stroke="black" points="787,-682 697,-682 697,-646 787,-646 787,-682"/>
-<text text-anchor="middle" x="742" y="-661.1" font-family="Courier,monospace" font-size="11.00">MessageTest</text>
-</g>
-<!-- \\MessageTest&#45;&gt;\\CakeTestCase -->
-<g id="edge31" class="edge"><title>\\MessageTest&#45;&gt;\\CakeTestCase</title>
-<path fill="none" stroke="black" d="M696.411,-662.428C676.952,-659.341 655.631,-652.312 642,-637 497.395,-474.561 722.808,-307.747 570,-153 549.325,-132.063 519.255,-123.378 490.31,-120.563"/>
-<polygon fill="none" stroke="black" points="490.369,-117.057 480.136,-119.801 489.847,-124.038 490.369,-117.057"/>
-</g>
-<!-- \\LanguageTest -->
-<g id="node17" class="node"><title>\\LanguageTest</title>
-<polygon fill="none" stroke="black" points="791,-628 693,-628 693,-592 791,-592 791,-628"/>
-<text text-anchor="middle" x="742" y="-607.1" font-family="Courier,monospace" font-size="11.00">LanguageTest</text>
-</g>
-<!-- \\LanguageTest&#45;&gt;\\CakeTestCase -->
-<g id="edge33" class="edge"><title>\\LanguageTest&#45;&gt;\\CakeTestCase</title>
-<path fill="none" stroke="black" d="M692.941,-607.694C674.515,-604.31 654.924,-597.255 642,-583 511.845,-439.448 707.401,-289.632 570,-153 549.228,-132.345 519.293,-123.686 490.486,-120.811"/>
-<polygon fill="none" stroke="black" points="490.602,-117.31 480.361,-120.025 490.061,-124.289 490.602,-117.31"/>
+<g id="edge19" class="edge"><title>\\LocalizationExtractTaskTest&#45;&gt;\\CakeTestCase</title>
+<path fill="none" stroke="black" d="M652.714,-591.958C648.841,-589.348 645.233,-586.378 642,-583 540.598,-477.064 676.742,-361.553 570,-261 549.152,-241.36 519.952,-232.766 491.789,-229.651"/>
+<polygon fill="none" stroke="black" points="491.747,-226.134 481.478,-228.742 491.132,-233.107 491.747,-226.134"/>
 </g>
 <!-- \\AllLocalizationTest -->
-<g id="node18" class="node"><title>\\AllLocalizationTest</title>
-<polygon fill="none" stroke="black" points="814,-574 670,-574 670,-538 814,-538 814,-574"/>
-<text text-anchor="middle" x="742" y="-553.1" font-family="Courier,monospace" font-size="11.00">AllLocalizationTest</text>
+<g id="node11" class="node"><title>\\AllLocalizationTest</title>
+<polygon fill="none" stroke="black" points="814,-466 670,-466 670,-430 814,-430 814,-466"/>
+<text text-anchor="middle" x="742" y="-445.1" font-family="Courier,monospace" font-size="11.00">AllLocalizationTest</text>
 </g>
 <!-- \\PHPUnit_Framework_TestSuite -->
-<g id="node46" class="node"><title>\\PHPUnit_Framework_TestSuite</title>
-<ellipse fill="none" stroke="black" cx="403" cy="-72" rx="166.877" ry="18.3848"/>
-<text text-anchor="middle" x="403" y="-68.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\PHPUnit_Framework_TestSuite</text>
+<g id="node36" class="node"><title>\\PHPUnit_Framework_TestSuite</title>
+<ellipse fill="none" stroke="black" cx="403" cy="-126" rx="166.877" ry="18.3848"/>
+<text text-anchor="middle" x="403" y="-122.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\PHPUnit_Framework_TestSuite</text>
 </g>
 <!-- \\AllLocalizationTest&#45;&gt;\\PHPUnit_Framework_TestSuite -->
-<g id="edge35" class="edge"><title>\\AllLocalizationTest&#45;&gt;\\PHPUnit_Framework_TestSuite</title>
-<path fill="none" stroke="black" d="M669.405,-547.114C659.059,-543.008 649.429,-537.193 642,-529 511.845,-385.448 707.401,-235.632 570,-99 565.285,-94.3113 560.098,-90.2408 554.559,-86.7158"/>
-<polygon fill="none" stroke="black" points="556.006,-83.5125 545.582,-81.615 552.547,-89.5986 556.006,-83.5125"/>
+<g id="edge21" class="edge"><title>\\AllLocalizationTest&#45;&gt;\\PHPUnit_Framework_TestSuite</title>
+<path fill="none" stroke="black" d="M669.313,-438.179C659.168,-434.173 649.625,-428.634 642,-421 554.844,-333.735 661.55,-235.644 570,-153 564.727,-148.24 558.96,-144.138 552.838,-140.613"/>
+<polygon fill="none" stroke="black" points="554.123,-137.337 543.633,-135.852 550.907,-143.555 554.123,-137.337"/>
 </g>
-<!-- \\LanguageFixture -->
-<g id="node19" class="node"><title>\\LanguageFixture</title>
-<polygon fill="none" stroke="black" points="801,-520 683,-520 683,-484 801,-484 801,-520"/>
-<text text-anchor="middle" x="742" y="-499.1" font-family="Courier,monospace" font-size="11.00">LanguageFixture</text>
+<!-- \\Translation -->
+<g id="node12" class="node"><title>\\Translation</title>
+<polygon fill="none" stroke="black" points="787,-1330 697,-1330 697,-1294 787,-1294 787,-1330"/>
+<text text-anchor="middle" x="742" y="-1309.1" font-family="Courier,monospace" font-size="11.00">Translation</text>
 </g>
-<!-- \\CakeTestFixture -->
-<g id="node48" class="node"><title>\\CakeTestFixture</title>
-<ellipse fill="none" stroke="black" cx="403" cy="-18" rx="92.1303" ry="18.3848"/>
-<text text-anchor="middle" x="403" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\CakeTestFixture</text>
+<!-- \\LocalizationAppModel -->
+<g id="node15" class="node"><title>\\LocalizationAppModel</title>
+<polygon fill="none" stroke="black" points="479,-1249 327,-1249 327,-1213 479,-1213 479,-1249"/>
+<text text-anchor="start" x="369" y="-1236.43" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="335" y="-1223.23" font-family="Courier,monospace" font-size="11.00">LocalizationAppModel</text>
 </g>
-<!-- \\LanguageFixture&#45;&gt;\\CakeTestFixture -->
-<g id="edge37" class="edge"><title>\\LanguageFixture&#45;&gt;\\CakeTestFixture</title>
-<path fill="none" stroke="black" d="M682.798,-497.457C667.596,-493.499 652.569,-486.657 642,-475 511.845,-331.448 707.401,-181.632 570,-45 551.983,-27.0834 527.07,-18.193 501.98,-14.2743"/>
-<polygon fill="none" stroke="black" points="502.365,-10.7948 491.995,-12.967 501.456,-17.7356 502.365,-10.7948"/>
+<!-- \\Translation&#45;&gt;\\LocalizationAppModel -->
+<g id="edge23" class="edge"><title>\\Translation&#45;&gt;\\LocalizationAppModel</title>
+<path fill="none" stroke="black" d="M696.281,-1301.08C643.163,-1288.38 554.385,-1267.17 488.391,-1251.4"/>
+<polygon fill="none" stroke="black" points="488.956,-1247.94 478.416,-1249.02 487.329,-1254.75 488.956,-1247.94"/>
 </g>
-<!-- \\MessageReferenceFixture -->
-<g id="node20" class="node"><title>\\MessageReferenceFixture</title>
-<polygon fill="none" stroke="black" points="828,-466 656,-466 656,-430 828,-430 828,-466"/>
-<text text-anchor="middle" x="742" y="-445.1" font-family="Courier,monospace" font-size="11.00">MessageReferenceFixture</text>
+<!-- \\MessageReference -->
+<g id="node13" class="node"><title>\\MessageReference</title>
+<polygon fill="none" stroke="black" points="804,-1276 680,-1276 680,-1240 804,-1240 804,-1276"/>
+<text text-anchor="middle" x="742" y="-1255.1" font-family="Courier,monospace" font-size="11.00">MessageReference</text>
 </g>
-<!-- \\MessageReferenceFixture&#45;&gt;\\CakeTestFixture -->
-<g id="edge39" class="edge"><title>\\MessageReferenceFixture&#45;&gt;\\CakeTestFixture</title>
-<path fill="none" stroke="black" d="M655.746,-432.132C650.695,-429.026 646.037,-425.35 642,-421 526.253,-296.29 692.039,-163.561 570,-45 552.041,-27.5527 527.522,-18.7317 502.805,-14.7265"/>
-<polygon fill="none" stroke="black" points="502.975,-11.2174 492.594,-13.3353 502.03,-18.1533 502.975,-11.2174"/>
+<!-- \\MessageReference&#45;&gt;\\LocalizationAppModel -->
+<g id="edge25" class="edge"><title>\\MessageReference&#45;&gt;\\LocalizationAppModel</title>
+<path fill="none" stroke="black" d="M679.427,-1253.02C626.167,-1248.77 549.099,-1242.64 489.861,-1237.92"/>
+<polygon fill="none" stroke="black" points="490.014,-1234.42 479.768,-1237.11 489.458,-1241.4 490.014,-1234.42"/>
 </g>
-<!-- \\TranslationFixture -->
-<g id="node21" class="node"><title>\\TranslationFixture</title>
-<polygon fill="none" stroke="black" points="811,-412 673,-412 673,-376 811,-376 811,-412"/>
-<text text-anchor="middle" x="742" y="-391.1" font-family="Courier,monospace" font-size="11.00">TranslationFixture</text>
+<!-- \\Message -->
+<g id="node14" class="node"><title>\\Message</title>
+<polygon fill="none" stroke="black" points="774,-1222 710,-1222 710,-1186 774,-1186 774,-1222"/>
+<text text-anchor="middle" x="742" y="-1201.1" font-family="Courier,monospace" font-size="11.00">Message</text>
 </g>
-<!-- \\TranslationFixture&#45;&gt;\\CakeTestFixture -->
-<g id="edge41" class="edge"><title>\\TranslationFixture&#45;&gt;\\CakeTestFixture</title>
-<path fill="none" stroke="black" d="M672.843,-385.904C661.313,-381.79 650.393,-375.769 642,-367 540.598,-261.064 676.742,-145.553 570,-45 551.962,-28.0082 527.674,-19.2841 503.214,-15.2235"/>
-<polygon fill="none" stroke="black" points="503.5,-11.7294 493.11,-13.8013 502.525,-18.6611 503.5,-11.7294"/>
+<!-- \\Message&#45;&gt;\\LocalizationAppModel -->
+<g id="edge27" class="edge"><title>\\Message&#45;&gt;\\LocalizationAppModel</title>
+<path fill="none" stroke="black" d="M709.802,-1206.56C659.866,-1210.54 562.026,-1218.33 490.209,-1224.05"/>
+<polygon fill="none" stroke="black" points="489.501,-1220.6 479.811,-1224.88 490.057,-1227.58 489.501,-1220.6"/>
 </g>
-<!-- \\MessageFixture -->
-<g id="node22" class="node"><title>\\MessageFixture</title>
-<polygon fill="none" stroke="black" points="797,-358 687,-358 687,-322 797,-322 797,-358"/>
-<text text-anchor="middle" x="742" y="-337.1" font-family="Courier,monospace" font-size="11.00">MessageFixture</text>
+<!-- \\AppModel -->
+<g id="node41" class="node"><title>\\AppModel</title>
+<ellipse fill="none" stroke="black" cx="82" cy="-1231" rx="62.2254" ry="18.3848"/>
+<text text-anchor="middle" x="82" y="-1227.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\AppModel</text>
 </g>
-<!-- \\MessageFixture&#45;&gt;\\CakeTestFixture -->
-<g id="edge43" class="edge"><title>\\MessageFixture&#45;&gt;\\CakeTestFixture</title>
-<path fill="none" stroke="black" d="M737.277,-321.674C722.627,-268.832 672.639,-115.462 570,-45 551.123,-32.0408 528.255,-24.4706 505.578,-20.2092"/>
-<polygon fill="none" stroke="black" points="505.977,-16.7274 495.536,-18.5279 504.821,-23.6313 505.977,-16.7274"/>
+<!-- \\LocalizationAppModel&#45;&gt;\\AppModel -->
+<g id="edge29" class="edge"><title>\\LocalizationAppModel&#45;&gt;\\AppModel</title>
+<path fill="none" stroke="black" d="M326.113,-1231C273.969,-1231 205.489,-1231 154.334,-1231"/>
+<polygon fill="none" stroke="black" points="154.019,-1227.5 144.019,-1231 154.019,-1234.5 154.019,-1227.5"/>
+</g>
+<!-- \\Language -->
+<g id="node16" class="node"><title>\\Language</title>
+<polygon fill="none" stroke="black" points="777,-1168 707,-1168 707,-1132 777,-1132 777,-1168"/>
+<text text-anchor="middle" x="742" y="-1147.1" font-family="Courier,monospace" font-size="11.00">Language</text>
+</g>
+<!-- \\Language&#45;&gt;\\LocalizationAppModel -->
+<g id="edge31" class="edge"><title>\\Language&#45;&gt;\\LocalizationAppModel</title>
+<path fill="none" stroke="black" d="M706.362,-1158.52C654.976,-1170.79 558.524,-1193.84 488.131,-1210.66"/>
+<polygon fill="none" stroke="black" points="487.292,-1207.26 478.379,-1212.99 488.919,-1214.07 487.292,-1207.26"/>
+</g>
+<!-- \\MessagesController -->
+<g id="node17" class="node"><title>\\MessagesController</title>
+<polygon fill="none" stroke="black" points="811,-1114 673,-1114 673,-1078 811,-1078 811,-1114"/>
+<text text-anchor="middle" x="742" y="-1093.1" font-family="Courier,monospace" font-size="11.00">MessagesController</text>
+</g>
+<!-- \\LocalizationAppController -->
+<g id="node19" class="node"><title>\\LocalizationAppController</title>
+<polygon fill="none" stroke="black" points="495,-1060 311,-1060 311,-1024 495,-1024 495,-1060"/>
+<text text-anchor="middle" x="403" y="-1039.1" font-family="Courier,monospace" font-size="11.00">LocalizationAppController</text>
+</g>
+<!-- \\MessagesController&#45;&gt;\\LocalizationAppController -->
+<g id="edge33" class="edge"><title>\\MessagesController&#45;&gt;\\LocalizationAppController</title>
+<path fill="none" stroke="black" d="M672.99,-1085.01C624.876,-1077.34 559.856,-1066.99 505.68,-1058.36"/>
+<polygon fill="none" stroke="black" points="506.122,-1054.88 495.696,-1056.77 505.021,-1061.8 506.122,-1054.88"/>
+</g>
+<!-- \\LocalizationController -->
+<g id="node18" class="node"><title>\\LocalizationController</title>
+<polygon fill="none" stroke="black" points="824,-1060 660,-1060 660,-1024 824,-1024 824,-1060"/>
+<text text-anchor="middle" x="742" y="-1039.1" font-family="Courier,monospace" font-size="11.00">LocalizationController</text>
+</g>
+<!-- \\LocalizationController&#45;&gt;\\LocalizationAppController -->
+<g id="edge35" class="edge"><title>\\LocalizationController&#45;&gt;\\LocalizationAppController</title>
+<path fill="none" stroke="black" d="M659.071,-1042C612.767,-1042 554.681,-1042 505.541,-1042"/>
+<polygon fill="none" stroke="black" points="505.519,-1038.5 495.519,-1042 505.519,-1045.5 505.519,-1038.5"/>
+</g>
+<!-- \\AppController -->
+<g id="node46" class="node"><title>\\AppController</title>
+<ellipse fill="none" stroke="black" cx="82" cy="-1042" rx="82.0244" ry="18.3848"/>
+<text text-anchor="middle" x="82" y="-1038.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\AppController</text>
+</g>
+<!-- \\LocalizationAppController&#45;&gt;\\AppController -->
+<g id="edge37" class="edge"><title>\\LocalizationAppController&#45;&gt;\\AppController</title>
+<path fill="none" stroke="black" d="M310.153,-1042C267.47,-1042 216.972,-1042 174.35,-1042"/>
+<polygon fill="none" stroke="black" points="174.258,-1038.5 164.258,-1042 174.258,-1045.5 174.258,-1038.5"/>
+</g>
+<!-- \\LanguagesController -->
+<g id="node20" class="node"><title>\\LanguagesController</title>
+<polygon fill="none" stroke="black" points="814,-1006 670,-1006 670,-970 814,-970 814,-1006"/>
+<text text-anchor="middle" x="742" y="-985.1" font-family="Courier,monospace" font-size="11.00">LanguagesController</text>
+</g>
+<!-- \\LanguagesController&#45;&gt;\\LocalizationAppController -->
+<g id="edge39" class="edge"><title>\\LanguagesController&#45;&gt;\\LocalizationAppController</title>
+<path fill="none" stroke="black" d="M669.336,-1002.4C638.733,-1008.24 602.698,-1014.81 570,-1020 549.306,-1023.29 527.113,-1026.46 505.882,-1029.32"/>
+<polygon fill="none" stroke="black" points="505.326,-1025.86 495.877,-1030.65 506.252,-1032.8 505.326,-1025.86"/>
+</g>
+<!-- \\LocalizationExtractTask -->
+<g id="node21" class="node"><title>\\LocalizationExtractTask</title>
+<polygon fill="none" stroke="black" points="828,-412 656,-412 656,-376 828,-376 828,-412"/>
+<text text-anchor="middle" x="742" y="-391.1" font-family="Courier,monospace" font-size="11.00">LocalizationExtractTask</text>
+</g>
+<!-- \\ExtractTask -->
+<g id="node49" class="node"><title>\\ExtractTask</title>
+<ellipse fill="none" stroke="black" cx="403" cy="-72" rx="70.9184" ry="18.3848"/>
+<text text-anchor="middle" x="403" y="-68.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\ExtractTask</text>
+</g>
+<!-- \\LocalizationExtractTask&#45;&gt;\\ExtractTask -->
+<g id="edge41" class="edge"><title>\\LocalizationExtractTask&#45;&gt;\\ExtractTask</title>
+<path fill="none" stroke="black" d="M655.637,-377.512C650.679,-374.547 646.066,-371.072 642,-367 554.844,-279.735 661.55,-181.644 570,-99 546.398,-77.6942 512.892,-69.58 482.079,-67.3104"/>
+<polygon fill="none" stroke="black" points="481.925,-63.7971 471.752,-66.7542 481.549,-70.787 481.925,-63.7971"/>
+</g>
+<!-- \\MessagesShell -->
+<g id="node22" class="node"><title>\\MessagesShell</title>
+<polygon fill="none" stroke="black" points="794,-358 690,-358 690,-322 794,-322 794,-358"/>
+<text text-anchor="middle" x="742" y="-337.1" font-family="Courier,monospace" font-size="11.00">MessagesShell</text>
+</g>
+<!-- \\AppShell -->
+<g id="node51" class="node"><title>\\AppShell</title>
+<ellipse fill="none" stroke="black" cx="403" cy="-18" rx="56.7776" ry="18.3848"/>
+<text text-anchor="middle" x="403" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\AppShell</text>
+</g>
+<!-- \\MessagesShell&#45;&gt;\\AppShell -->
+<g id="edge43" class="edge"><title>\\MessagesShell&#45;&gt;\\AppShell</title>
+<path fill="none" stroke="black" d="M737.277,-321.674C722.627,-268.832 672.639,-115.462 570,-45 541.16,-25.2013 503.005,-17.9812 470.447,-15.9208"/>
+<polygon fill="none" stroke="black" points="470.247,-12.4073 460.091,-15.4237 469.912,-19.3992 470.247,-12.4073"/>
 </g>
 </g>
 </svg>
