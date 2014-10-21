@@ -158,7 +158,7 @@ class MessagesController extends LocalizationAppController {
 			));
 			$this->redirect(array('action' => 'edit', $this->Message->id));
 		} else {
-			$this->Session->setFlash(__("Can't %s message! You can <a href=\"%s\">view all</a>",  __($id ? 'save' : 'create'), $listUrl), 'alert/simple', array(
+			$this->Session->setFlash(__("Can't %s message! You can <a href=\"%s\">view all</a>", __($id ? 'save' : 'create'), $listUrl), 'alert/simple', array(
 				'class' => 'alert-error', 'title' => __('Error!')
 			));
 		}
@@ -206,7 +206,7 @@ class MessagesController extends LocalizationAppController {
 			$conditions['LOWER(name) LIKE'] = "%" . mb_strtolower($conditions['name']) . "%";
 		}
 		unset($conditions['name']);
-		
+
 		if (!empty($conditions['file'])) {
 			$ids = $this->MessageReference->find('list', array(
 				'fields' => array('message_id', 'message_id'),

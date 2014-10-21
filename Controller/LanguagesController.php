@@ -112,11 +112,11 @@ class LanguagesController extends LocalizationAppController {
 		$this->Language->id = $id;
 		$success = $this->Language->save($data, true, array('code', 'name'));
 		if ($success) {
-			$this->Session->setFlash(__('Language %s. <a href="%s">Create new</a> or <a href="%s">view all</a>',  __($id ? 'saved' : 'created'), $createUrl, $listUrl), 'alert/simple', array(
+			$this->Session->setFlash(__('Language %s. <a href="%s">Create new</a> or <a href="%s">view all</a>', __($id ? 'saved' : 'created'), $createUrl, $listUrl), 'alert/simple', array(
 				'class' => 'alert-success', 'title' => __('Ok!')
 			));
 		} else {
-			$this->Session->setFlash(__("Can't %s language! You can <a href=\"%\">view all</a>",  __($id ? 'save' : 'create'), $listUrl), 'alert/simple', array(
+			$this->Session->setFlash(__("Can't %s language! You can <a href=\"%s\">view all</a>", __($id ? 'save' : 'create'), $listUrl), 'alert/simple', array(
 				'class' => 'alert-error', 'title' => __('Error!')
 			));
 		}
