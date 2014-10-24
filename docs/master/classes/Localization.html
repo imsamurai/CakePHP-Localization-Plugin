@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    API Documentation &raquo; \Message
+    <title>    API Documentation &raquo; \Localization
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -117,21 +117,27 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>
-                                                                                                                                                                                                                                                                            <li class="method public">
-        <a href="#method_export" title="export :: Export all messages to files">
-            <span class="description">Export all messages to files</span><pre>export</pre>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>__construct</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getById" title="getById :: Return message with translations linked by language ids">
-            <span class="description">Return message with translations linked by language ids</span><pre>getById</pre>
+        <a href="#method_clearAll" title="clearAll :: Delete all localization records">
+            <span class="description">Delete all localization records</span><pre>clearAll</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_saveAssociatedChanged" title="saveAssociatedChanged :: Save associated (only changed/new associated records)">
-            <span class="description">Save associated (only changed/new associated records)</span><pre>saveAssociatedChanged</pre>
+        <a href="#method_export" title="export :: Export data">
+            <span class="description">Export data</span><pre>export</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_import" title="import :: Import data">
+            <span class="description">Import data</span><pre>import</pre>
         </a>
     </li>
 
@@ -139,26 +145,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                            <li class="method protected">
-                            <a href="#method__buildMsgstr" title="_buildMsgstr :: Build message string for po file">
-                                <span class="description">Build message string for po file</span><pre>_buildMsgstr</pre>
-                            </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method__exportJsLocale" title="_exportJsLocale :: Save js localization into file">
-                                <span class="description">Save js localization into file</span><pre>_exportJsLocale</pre>
-                            </a>
-                        </li>
-                                                                                <li class="method protected">
-                            <a href="#method__exportLocale" title="_exportLocale :: Save php localization into file">
-                                <span class="description">Save php localization into file</span><pre>_exportLocale</pre>
-                            </a>
-                        </li>
-                                                                                                                                                            </ul>
+                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -172,11 +163,11 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>Message</h1>
+                <h1>Localization</h1>
                 <small style="display: block; text-align: right">
                                             Extends <a href="../classes/LocalizationAppModel.html">\LocalizationAppModel</a>
                                                         </small>
-                <p class="short_description">Localization Message Model</p>
+                <p class="short_description">Localization Model</p>
                 <div class="details">
                     <div class="long_description">
                         
@@ -203,10 +194,10 @@
                                                                                                                             </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method__buildMsgstr"></a>
-                        <div class="element clickable method protected  method__buildMsgstr" data-toggle="collapse" data-target=".method__buildMsgstr .collapse">
-                            <h2>Build message string for po file</h2>
-                            <pre>_buildMsgstr(string $message, integer $limit = 500) : string</pre>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>__construct(boolean|integer|string|array $id = false, string $table = null, string $ds = null) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -216,90 +207,38 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                             </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$message</h4>
-                                                <code>string</code><p></p>
+                                                <h4>$id</h4>
+                                                <code>boolean|integer|string|array</code><p><p>Set this ID for this model on startup,
+can also be an array of options, see above.</p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$limit</h4>
-                                                <code>integer</code><p></p>
+                                                <h4>$table</h4>
+                                                <code>string</code><p><p>Name of database table to use.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ds</h4>
+                                                <code>string</code><p><p>DataSource connection name.</p></p>
                                             </div>
                                                                             
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
-                                            <a id="method__exportJsLocale"></a>
-                        <div class="element clickable method protected  method__exportJsLocale" data-toggle="collapse" data-target=".method__exportJsLocale .collapse">
-                            <h2>Save js localization into file</h2>
-                            <pre>_exportJsLocale(string $code, array $data) : boolean</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$code</h4>
-                                                <code>string</code><p><p>Language code</p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$data</h4>
-                                                <code>array</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>boolean</code><p><p>True on succes</p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method__exportLocale"></a>
-                        <div class="element clickable method protected  method__exportLocale" data-toggle="collapse" data-target=".method__exportLocale .collapse">
-                            <h2>Save php localization into file</h2>
-                            <pre>_exportLocale(string $code, array $data) : boolean</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$code</h4>
-                                                <code>string</code><p><p>Language code</p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$data</h4>
-                                                <code>array</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>boolean</code><p><p>True on succes</p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_export"></a>
-                        <div class="element clickable method public  method_export" data-toggle="collapse" data-target=".method_export .collapse">
-                            <h2>Export all messages to files</h2>
-                            <pre>export() : boolean</pre>
+                                            <a id="method_clearAll"></a>
+                        <div class="element clickable method public  method_clearAll" data-toggle="collapse" data-target=".method_clearAll .collapse">
+                            <h2>Delete all localization records</h2>
+                            <pre>clearAll() : boolean</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -320,15 +259,15 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>boolean</code><p><p>True on success</p></p>
+                                        <code>boolean</code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
-                                            <a id="method_getById"></a>
-                        <div class="element clickable method public  method_getById" data-toggle="collapse" data-target=".method_getById .collapse">
-                            <h2>Return message with translations linked by language ids</h2>
-                            <pre>getById(integer $id) : array</pre>
+                                            <a id="method_export"></a>
+                        <div class="element clickable method public  method_export" data-toggle="collapse" data-target=".method_export .collapse">
+                            <h2>Export data</h2>
+                            <pre>export() : array</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -338,24 +277,26 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                             </table>
 
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$id</h4>
-                                                <code>integer</code><p></p>
-                                            </div>
-                                                                            
+                                    
                                                                             <h3>Response</h3>
                                         <code>array</code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
-                                            <a id="method_saveAssociatedChanged"></a>
-                        <div class="element clickable method public  method_saveAssociatedChanged" data-toggle="collapse" data-target=".method_saveAssociatedChanged .collapse">
-                            <h2>Save associated (only changed/new associated records)</h2>
-                            <pre>saveAssociatedChanged(array $data, array $options = array()) : mixed</pre>
+                                            <a id="method_import"></a>
+                        <div class="element clickable method public  method_import" data-toggle="collapse" data-target=".method_import .collapse">
+                            <h2>Import data</h2>
+                            <pre>import(array $data) : boolean</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -372,15 +313,9 @@
                                                 <h4>$data</h4>
                                                 <code>array</code><p></p>
                                             </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$options</h4>
-                                                <code>array</code><p></p>
-                                            </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code>mixed</code><p><p>If atomic: True on success, or false on failure.
-Otherwise: array similar to the $data array passed, but values are set to true/false
-depending on whether each record saved successfully.</p></p>
+                                        <code>boolean</code><p></p>
                                                                     </div>
                             </div>
 
@@ -388,36 +323,10 @@ depending on whether each record saved successfully.</p></p>
                     
                     
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_validate"> </a>
-                            <div class="element clickable property  public property_validate" data-toggle="collapse" data-target=".property_validate .collapse">
+                                                    <a id="property_useTable"> </a>
+                            <div class="element clickable property  public property_useTable" data-toggle="collapse" data-target=".property_useTable .collapse">
                                 <h2>{@inheritdoc}</h2>
-                                <pre>validate : array</pre>
-                                <div class="labels">
-                                                                                                        </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_hasMany"> </a>
-                            <div class="element clickable property  public property_hasMany" data-toggle="collapse" data-target=".property_hasMany .collapse">
-                                <h2>{@inheritdoc}</h2>
-                                <pre>hasMany : array</pre>
+                                <pre>useTable : array</pre>
                                 <div class="labels">
                                                                                                         </div>
                                 <div class="row collapse">
@@ -518,15 +427,15 @@ depending on whether each record saved successfully.</p></p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_Translations"> </a>
-                            <div class="element clickable property  public property_Translations" data-toggle="collapse" data-target=".property_Translations .collapse">
-                                <h2>Translations</h2>
-                                <pre>Translations : \Translation</pre>
+                                                    <a id="property_Language"> </a>
+                            <div class="element clickable property  public property_Language" data-toggle="collapse" data-target=".property_Language .collapse">
+                                <h2>Language</h2>
+                                <pre>Language : \Language</pre>
                                 <div class="labels">
                                                                                                         </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
-                                        <div class="long_description"><p>Translation model</p></div>
+                                        <div class="long_description"><p>Localization language model</p></div>
 
                                         <table class="table">
                                                                                             <tr>
@@ -539,19 +448,44 @@ depending on whether each record saved successfully.</p></p>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code>\Translation</code>
+                                            <code>\Language</code>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_References"> </a>
-                            <div class="element clickable property  public property_References" data-toggle="collapse" data-target=".property_References .collapse">
-                                <h2>References</h2>
-                                <pre>References : \MessageReference</pre>
+                                                    <a id="property_Message"> </a>
+                            <div class="element clickable property  public property_Message" data-toggle="collapse" data-target=".property_Message .collapse">
+                                <h2>Message</h2>
+                                <pre>Message : \Message</pre>
                                 <div class="labels">
                                                                                                         </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
-                                        <div class="long_description"><p>Message Reference model</p></div>
+                                        <div class="long_description"><p>Localization message model</p></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\Message</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_MessageReference"> </a>
+                            <div class="element clickable property  public property_MessageReference" data-toggle="collapse" data-target=".property_MessageReference .collapse">
+                                <h2>MessageReference</h2>
+                                <pre>MessageReference : \MessageReference</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"><p>Localization message reference model</p></div>
 
                                         <table class="table">
                                                                                             <tr>
@@ -568,16 +502,41 @@ depending on whether each record saved successfully.</p></p>
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_Translation"> </a>
+                            <div class="element clickable property  public property_Translation" data-toggle="collapse" data-target=".property_Translation .collapse">
+                                <h2>Translation</h2>
+                                <pre>Translation : \Translation</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"><p>Localization translation model</p></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\Translation</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                             </div>
             </div>
-            <a id="\Message"></a>
+            <a id="\Localization"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
     <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/Message.html">Message</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Localization.html">Localization</a></li>
             </ul>
         </div>
     </div>
