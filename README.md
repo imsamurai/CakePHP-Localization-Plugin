@@ -35,7 +35,7 @@ Write global config if you need to change plugin config (see plugin bootstrap.ph
 ## Usage
 
 Use `Localization` model for manage localization variables in DB.
-Plugin works with `__*` style functions, also in javascript. Inline javascript are not supported (only *.js files).
+Plugin works with `__*` style functions, also in javascript. Inline javascript are not supported (only \*.js files).
 For php export from db will create/replace files in `app/Locale/*` and for js in `webroot/js/Locale/*` (you can change this in config, see bootstrap.php of the plugin).
 Just open `example.com/localization` for edit/translate/export to db
 
